@@ -4,6 +4,7 @@
 .producthero {
     background-color: $primary-clr;
     padding: 36px 0;
+    overflow: hidden;
 
     @include media-breakpoint-up(xl) {
         padding: 90px 0;
@@ -265,10 +266,8 @@
         flex-direction: column;
         gap: 24px;
         justify-content: space-between;
-        padding: 16px 0;
 
         @include media-breakpoint-up(md) {
-            padding: 64px 0;
             flex-direction: row;
             gap: 22px;
             align-items: center;
@@ -329,6 +328,17 @@
             }
         }
 
+        p {
+            font-size: 12px;
+            font-weight: 400;
+            color: $color-51;
+
+            @include media-breakpoint-up(md) {
+                font-size: 14px;
+            }
+
+        }
+
     }
 
     &_right {
@@ -364,6 +374,7 @@
 
 .offerings {
     padding-top: 48px;
+    overflow: hidden;
 
     @include media-breakpoint-up(lg) {
         padding-top: 96px;
@@ -595,6 +606,11 @@
 
         @include media-breakpoint-up(md) {
             margin-top: 80px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 80px;
             grid-template-columns: repeat(4, minmax(0, 1fr));
         }
 
@@ -712,7 +728,7 @@
                 width: 300px;
                 height: 300px;
 
-                @include media-breakpoint-up(sm) {
+                @include media-breakpoint-up(xl) {
                     width: 600px;
                     height: 600px;
                 }
@@ -751,10 +767,12 @@
         display: flex;
         flex-direction: column;
         row-gap: 10px;
+        order: -1;
 
         @include media-breakpoint-up(md) {
             row-gap: 16px;
             width: 50%;
+            order: 0;
         }
 
         p {

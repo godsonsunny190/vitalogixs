@@ -240,28 +240,30 @@ var swiper = new Swiper(".product_slider", {
     320: {
       slidesPerView: 1.2,
       spaceBetween: 16,
-      slidesOffsetBefore: 20,
-      slidesOffsetAfter: 20,
+      // slidesOffsetBefore: 20,
     },
 
     640: {
-      slidesPerView: 2,
+      slidesPerView: 2.2,
       spaceBetween: 16,
-      slidesOffsetBefore: 30,
-      slidesOffsetAfter: 30,
+      // slidesOffsetBefore: 30,
+    },
+
+    768: {
+      slidesPerView: 2.2,
+      spaceBetween: 26,
+      // slidesOffsetBefore: 50,
     },
 
     991: {
-      slidesPerView: 2.5,
-      spaceBetween: 40,
-      slidesOffsetBefore: 50,
-      slidesOffsetAfter: 50,
+      slidesPerView: 3.2,
+      spaceBetween: 26,
+      // slidesOffsetBefore: 50,
     },
 
-    1024: {
+    1280: {
       slidesPerView: 3.5,
       spaceBetween: 40,
-      slidesOffsetBefore: 80,
     },
   },
 });

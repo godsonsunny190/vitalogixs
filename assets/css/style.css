@@ -11056,6 +11056,7 @@ h3, .h3 {
   color: #ffffff;
   flex: 1;
   padding: 11px 0;
+  border: 1px solid #111928;
 }
 @media (min-width: 992px) {
   .primary-btn {
@@ -11129,6 +11130,7 @@ h3, .h3 {
 .producthero {
   background-color: #F2F0FA;
   padding: 36px 0;
+  overflow: hidden;
 }
 @media (min-width: 1200px) {
   .producthero {
@@ -11370,11 +11372,9 @@ h3, .h3 {
   flex-direction: column;
   gap: 24px;
   justify-content: space-between;
-  padding: 16px 0;
 }
 @media (min-width: 768px) {
   .weightcalc_wrapper {
-    padding: 64px 0;
     flex-direction: row;
     gap: 22px;
     align-items: center;
@@ -11430,6 +11430,16 @@ h3, .h3 {
     margin-top: 6px;
   }
 }
+.weightcalc_left p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #374151;
+}
+@media (min-width: 768px) {
+  .weightcalc_left p {
+    font-size: 14px;
+  }
+}
 .weightcalc_right {
   width: 100%;
   padding-bottom: 16px;
@@ -11462,6 +11472,7 @@ h3, .h3 {
 /* ===================================== */
 .offerings {
   padding-top: 48px;
+  overflow: hidden;
 }
 @media (min-width: 992px) {
   .offerings {
@@ -11681,6 +11692,12 @@ h3, .h3 {
 @media (min-width: 768px) {
   .work_wrapper {
     margin-top: 80px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 992px) {
+  .work_wrapper {
+    margin-top: 80px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
@@ -11788,7 +11805,7 @@ h3, .h3 {
   width: 300px;
   height: 300px;
 }
-@media (min-width: 576px) {
+@media (min-width: 1200px) {
   .rotxt_left #circle svg {
     width: 600px;
     height: 600px;
@@ -11819,11 +11836,13 @@ h3, .h3 {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+  order: -1;
 }
 @media (min-width: 768px) {
   .rotxt_right {
     row-gap: 16px;
     width: 50%;
+    order: 0;
   }
 }
 .rotxt_right p {
