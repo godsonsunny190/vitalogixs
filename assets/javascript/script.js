@@ -267,7 +267,7 @@ var swiper = new Swiper(".product_slider", {
 });
 
 /* ===================================== */
-/*             REVEAL SCRIPT             */
+/*         RELATED SEVICE SLIDER         */
 /* ===================================== */
 var swiper = new Swiper(".related_slider", {
   slidesPerView: 4.2,
@@ -309,6 +309,28 @@ var swiper = new Swiper(".related_slider", {
       spaceBetween: 26,
     },
   },
+});
+
+/* ===================================== */
+/*         RELATED SEVICE SLIDER         */
+/* ===================================== */
+var swiper = new Swiper(".faviorites_slider", {
+  slidesPerView: 1.5,
+  spaceBetween: 16,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-unique",
+    prevEl: ".swiper-button-prev-unique",
+  },
+  speed: 1000,
+  // autoplay: {
+  //   delay: 1500,
+  //   disableOnInteraction: false,
+  // },
 });
 
 /* ===================================== */

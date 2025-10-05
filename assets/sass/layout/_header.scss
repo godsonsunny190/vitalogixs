@@ -36,8 +36,9 @@
             padding: 8px;
             background-color: #ffffff;
             border-radius: 16px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
-                0 1px 2px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 2px 4px rgba(0, 0, 0, 0.06);
+
 
             h5 {
                 padding: 8px;
@@ -81,6 +82,97 @@
 
                     }
 
+                }
+            }
+
+            .swiper {
+                &-slide {
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 16px;
+                    min-height: 272px;
+
+                    span {
+                        border-radius: 20px;
+                        color: $color-fb;
+                        font-size: 11px;
+                        line-height: 150%;
+                        padding: 2px 8px;
+                        width: fit-content;
+
+                        @include media-breakpoint-up(md) {
+                            font-size: 12px;
+                        }
+                    }
+
+                    h4 {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 1;
+                        margin-top: 8px;
+                        color: $black-clr;
+
+                        @include media-breakpoint-up(md) {
+                            font-size: 16px;
+                        }
+
+                    }
+                }
+
+                &-content {
+                    padding: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 6px;
+
+                    @include media-breakpoint-up(md) {
+                        padding: 16px;
+                        row-gap: 8px;
+                    }
+
+                }
+
+                &-button {
+                    margin-top: 24px;
+                    margin-bottom: 8px;
+                    display: flex;
+                    flex-direction: row;
+                    column-gap: 10px;
+                    padding-right: 20px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    justify-content: flex-end;
+
+                    @include media-breakpoint-up(xl) {
+                        margin-top: 40px;
+                    }
+
+                    @media (min-width: 1581px) {
+                        padding-right: 0;
+                    }
+
+                    .swiper-button-next-unique,
+                    .swiper-button-prev-unique {
+                        color: $color-37;
+                        cursor: pointer;
+                        background-color: $color-f6;
+                        border-radius: 9999px;
+                        width: 32px;
+                        height: 32px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: 16px;
+                            height: 12px;
+                        }
+
+                    }
+
+                    .swiper-button-next-unique{
+                        transform: rotate(180deg);
+                    }
                 }
             }
         }

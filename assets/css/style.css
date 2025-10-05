@@ -10919,7 +10919,7 @@ h3, .h3 {
   padding: 8px;
   background-color: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
 }
 .header .offcanvas-menu h5, .header .offcanvas-menu .h5 {
   padding: 8px;
@@ -10956,6 +10956,90 @@ h3, .h3 {
 }
 .header .offcanvas-menu ul li a:hover {
   background-color: #F3F4F6;
+}
+.header .offcanvas-menu .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  min-height: 272px;
+}
+.header .offcanvas-menu .swiper-slide span {
+  border-radius: 20px;
+  color: #F9FAFB;
+  font-size: 11px;
+  line-height: 150%;
+  padding: 2px 8px;
+  width: fit-content;
+}
+@media (min-width: 768px) {
+  .header .offcanvas-menu .swiper-slide span {
+    font-size: 12px;
+  }
+}
+.header .offcanvas-menu .swiper-slide h4, .header .offcanvas-menu .swiper-slide .h4 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 8px;
+  color: #000000;
+}
+@media (min-width: 768px) {
+  .header .offcanvas-menu .swiper-slide h4, .header .offcanvas-menu .swiper-slide .h4 {
+    font-size: 16px;
+  }
+}
+.header .offcanvas-menu .swiper-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+@media (min-width: 768px) {
+  .header .offcanvas-menu .swiper-content {
+    padding: 16px;
+    row-gap: 8px;
+  }
+}
+.header .offcanvas-menu .swiper-button {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: flex-end;
+}
+@media (min-width: 1200px) {
+  .header .offcanvas-menu .swiper-button {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 1581px) {
+  .header .offcanvas-menu .swiper-button {
+    padding-right: 0;
+  }
+}
+.header .offcanvas-menu .swiper-button .swiper-button-next-unique,
+.header .offcanvas-menu .swiper-button .swiper-button-prev-unique {
+  color: #1f2a37;
+  cursor: pointer;
+  background-color: #F3F4F6;
+  border-radius: 9999px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .offcanvas-menu .swiper-button .swiper-button-next-unique img,
+.header .offcanvas-menu .swiper-button .swiper-button-prev-unique img {
+  width: 16px;
+  height: 12px;
+}
+.header .offcanvas-menu .swiper-button .swiper-button-next-unique {
+  transform: rotate(180deg);
 }
 
 .primary-btn {
