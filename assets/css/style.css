@@ -11057,11 +11057,17 @@ h3, .h3 {
   flex: 1;
   padding: 11px 0;
   border: 1px solid #111928;
+  transition: all 0.3s ease-in-out;
 }
 @media (min-width: 992px) {
   .primary-btn {
     font-size: 16px;
   }
+}
+.primary-btn:hover {
+  background-color: transparent;
+  color: #111928;
+  transition: all 0.3s ease-in-out;
 }
 
 .secondery-btn {
@@ -11948,7 +11954,98 @@ h3, .h3 {
 }
 
 /* ===================================== */
-/*        CALL TO ACION STYLE END        */
+/*          BENIFIT SECTION STYLE        */
+/* ===================================== */
+.benefit {
+  padding: 32px 0;
+}
+@media (min-width: 992px) {
+  .benefit {
+    padding: 48px 0;
+  }
+}
+.benefit .desktop {
+  display: none;
+}
+@media (min-width: 992px) {
+  .benefit .desktop {
+    display: block;
+  }
+}
+.benefit .mobile {
+  display: block;
+}
+@media (min-width: 992px) {
+  .benefit .mobile {
+    display: none;
+  }
+}
+.benefit_content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  top: 0;
+  width: 89.3%;
+  position: absolute;
+  padding: 32px 0;
+  color: #1f2a37;
+}
+@media (min-width: 992px) {
+  .benefit_content {
+    row-gap: 32px;
+    width: 46.876%;
+    padding: 96px 0;
+  }
+}
+.benefit_content ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+@media (min-width: 992px) {
+  .benefit_content ul {
+    row-gap: 16px;
+  }
+}
+.benefit_content ul li {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media (min-width: 992px) {
+  .benefit_content ul li {
+    font-size: 18px;
+    line-height: 150%;
+  }
+}
+.benefit_content ul li img {
+  width: 24px;
+  height: 24px;
+}
+.benefit_content p {
+  font-size: 12px;
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  .benefit_content p {
+    font-size: 14px;
+  }
+}
+.benefit_content .primary-btn {
+  padding: 14px 24px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.benefit_content .primary-btn img {
+  width: auto;
+}
+
+/* ===================================== */
+/*           CALL TO ACION STYLE         */
 /* ===================================== */
 .cta {
   padding: 16px 0;
@@ -11987,7 +12084,6 @@ h3, .h3 {
   }
 }
 .cta_wrapper button {
-  margin-left: 8px;
   font-weight: 500;
   font-size: 14px;
   line-height: 150%;
@@ -12001,7 +12097,7 @@ h3, .h3 {
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 @media (min-width: 992px) {
   .cta_wrapper button {
@@ -12013,6 +12109,8 @@ h3, .h3 {
   .cta_wrapper button {
     font-size: 18px;
     font-weight: 600;
+    margin-left: 8px;
+    margin-bottom: 16px;
   }
 }
 .cta_wrapper button img {

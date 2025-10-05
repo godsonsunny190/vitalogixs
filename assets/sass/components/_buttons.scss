@@ -8,10 +8,16 @@
      flex: 1;
      padding: 11px 0;
      border: 1px solid #111928;
-
+     transition: all 0.3s ease-in-out;
 
      @include media-breakpoint-up(lg) {
          font-size: 16px;
+     }
+
+     &:hover {
+         background-color: transparent;
+         color: $color-28;
+         transition: all 0.3s ease-in-out;
      }
  }
 

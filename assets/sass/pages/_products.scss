@@ -887,9 +887,106 @@
     }
 }
 
+/* ===================================== */
+/*          BENIFIT SECTION STYLE        */
+/* ===================================== */
+
+.benefit {
+    padding: 32px 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 48px 0;
+    }
+
+    .desktop {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
+    }
+
+    .mobile {
+        display: block;
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+    }
+
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        top: 0;
+        width: 89.3%;
+        position: absolute;
+        padding: 32px 0;
+        color: $color-37;
+
+        @include media-breakpoint-up(lg) {
+            row-gap: 32px;
+            width: 46.876%;
+            padding: 96px 0;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+
+            @include media-breakpoint-up(lg) {
+                row-gap: 16px;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                column-gap: 12px;
+                font-size: 16px;
+                font-weight: 500;
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 18px;
+                    line-height: 150%;
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+
+        p {
+            font-size: 12px;
+            font-weight: 400;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 14px;
+            }
+
+        }
+
+        .primary-btn {
+            padding: 14px 24px;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            img {
+                width: auto;
+            }
+        }
+
+    }
+}
+
 
 /* ===================================== */
-/*        CALL TO ACION STYLE END        */
+/*           CALL TO ACION STYLE         */
 /* ===================================== */
 
 .cta {
@@ -928,7 +1025,6 @@
         }
 
         button {
-            margin-left: 8px;
             font-weight: 500;
             font-size: 14px;
             line-height: 150%;
@@ -942,7 +1038,7 @@
             align-items: center;
             justify-content: center;
             background-color: transparent;
-            margin-bottom: 16px;
+            margin-bottom: 8px;
 
             @include media-breakpoint-up(lg) {
                 width: 161px;
@@ -952,6 +1048,8 @@
             @include media-breakpoint-up(lg) {
                 font-size: 18px;
                 font-weight: 600;
+                margin-left: 8px;
+                margin-bottom: 16px;
             }
 
             img {
