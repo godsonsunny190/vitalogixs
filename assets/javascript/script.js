@@ -280,10 +280,10 @@ var swiper = new Swiper(".related_slider", {
     clickable: true,
   },
   speed: 1000,
-  autoplay: {
-    delay: 1500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 1500,
+  //   disableOnInteraction: false,
+  // },
 
   breakpoints: {
     320: {
