@@ -867,3 +867,111 @@
         }
     }
 }
+
+
+/* ===================================== */
+/*        CALL TO ACION STYLE END        */
+/* ===================================== */
+
+.cta {
+    padding: 16px 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 48px 0;
+    }
+
+    &_wrapper {
+        border-radius: 20px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        justify-content: space-between;
+        background-color: $color-fb;
+
+        @include media-breakpoint-up(lg) {
+            border-radius: 36px;
+            padding: 64px 80px;
+            flex-direction: row;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: $color-63;
+            margin-top: 16px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+            }
+
+        }
+
+        button {
+            margin-left: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 150%;
+            color: $color-c3;
+            width: 136px;
+            height: 41px;
+            border: 1px solid $color-c3;
+            border-radius: 999px;
+            display: flex;
+            column-gap: 8px;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            margin-bottom: 16px;
+
+            @include media-breakpoint-up(lg) {
+                width: 161px;
+                height: 48px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            img {
+                width: 14px;
+                height: 13.3px;
+
+                @include media-breakpoint-up(lg) {
+                    width: 16px;
+                    height: 15.2px;
+                }
+
+            }
+
+        }
+
+        a {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+            color: $color-37;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+            }
+
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: $color-63;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+            }
+
+        }
+
+    }
+
+}

@@ -283,34 +283,32 @@ var swiper = new Swiper(".related_slider", {
     disableOnInteraction: false,
   },
 
-  // breakpoints: {
-  //   320: {
-  //     slidesPerView: 1.2,
-  //     spaceBetween: 16,
-  //     slidesOffsetBefore: 20,
-  //     slidesOffsetAfter: 20,
-  //   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+    },
 
-  //   640: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 16,
-  //     slidesOffsetBefore: 30,
-  //     slidesOffsetAfter: 30,
-  //   },
+    640: {
+      slidesPerView: 2.2,
+      spaceBetween: 16,
+    },
 
-  //   991: {
-  //     slidesPerView: 2.5,
-  //     spaceBetween: 40,
-  //     slidesOffsetBefore: 50,
-  //     slidesOffsetAfter: 50,
-  //   },
+    991: {
+      slidesPerView: 2.2,
+      spaceBetween: 20,
+    },
 
-  //   1024: {
-  //     slidesPerView: 3.5,
-  //     spaceBetween: 40,
-  //     slidesOffsetBefore: 80,
-  //   },
-  // },
+    1024: {
+      slidesPerView: 3.2,
+      spaceBetween: 20,
+    },
+
+    1280: {
+      slidesPerView: 4.2,
+      spaceBetween: 26,
+    },
+  },
 });
 
 /* ===================================== */
