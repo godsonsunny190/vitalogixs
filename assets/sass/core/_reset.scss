@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  font-family: 'Outfit';
+  color: $color-51;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #747474;
+
+
+  &:hover {
+    text-decoration: none;
+    color: $color-51;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+}
+
+section {
+  max-width: 100vw;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+ul,
+li {
+  padding: 0;
+  list-style: none;
+  margin: 0px;
+}
+
+.form-control {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+$grid-breakpoints: (xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  // xxxl: 1600px,
+  // xxxxl: 1800px,
+);
+
+.container {
+  max-width: 100%;
+
+  @include media-breakpoint-up(md) {
+    max-width: calc(100% - 30px);
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: calc(100% - 150px);
+  }
+}

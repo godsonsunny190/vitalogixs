@@ -1,0 +1,22 @@
+.header {
+    border-bottom: 1px solid $border-color;
+    padding: 16px 0;
+
+    &_logo {
+        img {
+            max-width: 205px;
+        }
+    }
+
+    .offcanvas {
+
+        &-body {
+            justify-content: end;
+
+            ul {
+                display: flex;
+                column-gap: 24px;
+            }
+        }
+    }
+}

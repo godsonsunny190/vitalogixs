@@ -1,0 +1,20 @@
+.breadcrumb {
+    margin-top: 26px;
+
+    &_list {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+    }
+
+    &_item {
+        color: $color-51;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+
+        a {
+            color: $color-51;
+        }
+    }
+}
