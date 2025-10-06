@@ -11134,7 +11134,7 @@ h3, .h3 {
 /*      PRODUCTS HERO SECTION STYLE      */
 /* ===================================== */
 .producthero {
-  background-color: #F3F9EB;
+  background-color: #EFF8FF;
   padding: 36px 0;
   overflow: hidden;
 }
@@ -11292,7 +11292,7 @@ h3, .h3 {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 24px;
-  background-color: #F3F9EB;
+  background-color: #EFF8FF;
   gap: 4.5px;
 }
 @media (min-width: 768px) {
@@ -11531,7 +11531,7 @@ h3, .h3 {
   width: 225px;
   padding: 16px;
   border-radius: 24px;
-  background-color: #F3F9EB;
+  background-color: #EFF8FF;
 }
 @media (min-width: 768px) {
   .offerings_slider .slick-slide {
@@ -11773,7 +11773,7 @@ h3, .h3 {
   font-weight: 500;
   line-height: normal;
   text-align: center;
-  background-color: #F3F9EB;
+  background-color: #EFF8FF;
   color: #4342CA;
 }
 @media (min-width: 768px) {
@@ -12164,14 +12164,27 @@ h3, .h3 {
 /* ===================================== */
 .multislider {
   background-color: #EFE9F6;
-  height: 800px;
   overflow: hidden;
+  padding: 56px 0;
+}
+@media (min-width: 992px) {
+  .multislider {
+    height: 800px;
+    padding: 0;
+  }
 }
 .multislider_wrapper {
-  display: flex;
-  align-items: center;
-  gap: 40px;
   height: 100%;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .multislider_wrapper {
+    gap: 40px;
+    align-items: center;
+    flex-direction: row;
+  }
 }
 .multislider_left {
   flex: 1;
@@ -12210,28 +12223,47 @@ h3, .h3 {
   }
 }
 .multislider_right {
-  width: 42%;
+  width: 100%;
   display: flex;
-  gap: 14px;
+  gap: 4px;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .multislider_right {
+    width: 42%;
+    flex-direction: row;
+    gap: 14px;
+  }
 }
 .multislider_right .slider {
-  width: 50%;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .multislider_right .slider {
+    width: 50%;
+  }
 }
 .multislider_right .slider div {
   height: 100%;
 }
 .multislider_right .slider .slick-slide {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  margin: 6px 0;
-  height: 336px !important;
+  margin: 0px 6px;
+}
+@media (min-width: 992px) {
+  .multislider_right .slider .slick-slide {
+    margin: 6px 0;
+    display: flex !important;
+  }
 }
 .multislider_right .slider .slick-slide img {
-  object-fit: cover;
   border-radius: 24px;
   background-color: #EAF7F5;
-  height: 100%;
+  height: 260px !important;
+}
+@media (min-width: 768px) {
+  .multislider_right .slider .slick-slide img {
+    height: 336px !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

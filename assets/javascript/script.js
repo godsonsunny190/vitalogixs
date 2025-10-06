@@ -352,6 +352,25 @@ $(".mutislider-1").slick({
   pauseOnHover: true,
   vertical: true,
   verticalSwiping: true,
+
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        vertical: false,
+        verticalSwiping: false,
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 578,
+      settings: {
+        vertical: false,
+        verticalSwiping: false,
+        slidesToShow: 1.5,
+      },
+    },
+  ],
 });
 $(".mutislider-2").slick({
   speed: 8000,
@@ -366,6 +385,25 @@ $(".mutislider-2").slick({
   pauseOnHover: true,
   vertical: true,
   verticalSwiping: true,
+
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        vertical: false,
+        verticalSwiping: false,
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 578,
+      settings: {
+        vertical: false,
+        verticalSwiping: false,
+        slidesToShow: 1.5,
+      },
+    },
+  ],
 });
 /* ===================================== */
 /*         SERVICES MARQUEE SLIDER       */
