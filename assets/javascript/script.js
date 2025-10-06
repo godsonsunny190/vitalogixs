@@ -314,7 +314,7 @@ var swiper = new Swiper(".related_slider", {
 });
 
 /* ===================================== */
-/*         RELATED SEVICE SLIDER         */
+/*            FAVORITES SLIDE            */
 /* ===================================== */
 var swiper = new Swiper(".faviorites_slider", {
   slidesPerView: 1.5,
@@ -335,6 +335,38 @@ var swiper = new Swiper(".faviorites_slider", {
   // },
 });
 
+/* ===================================== */
+/*              MUTLI SLIDER             */
+/* ===================================== */
+
+$(".mutislider-1").slick({
+  speed: 5000,
+  autoplay: true,
+  autoplaySpeed: 0,
+  centerMode: false,
+  cssEase: "linear",
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  infinite: true,
+  arrows: false,
+  pauseOnHover: true,
+  vertical: true,
+  verticalSwiping: true,
+});
+$(".mutislider-2").slick({
+  speed: 8000,
+  autoplay: true,
+  autoplaySpeed: 0,
+  centerMode: false,
+  cssEase: "linear",
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  infinite: true,
+  arrows: false,
+  pauseOnHover: true,
+  vertical: true,
+  verticalSwiping: true,
+});
 /* ===================================== */
 /*         SERVICES MARQUEE SLIDER       */
 /* ===================================== */

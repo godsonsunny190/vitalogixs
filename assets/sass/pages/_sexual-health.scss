@@ -1,3 +1,87 @@
 /* ===================================== */
 /*           MULTISLIER BANNER           */
 /* ===================================== */
+
+.multislider {
+    background-color: $color-lavender-light;
+    height: 800px;
+    overflow: hidden;
+
+    &_wrapper {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        height: 100%;
+    }
+
+    &_left {
+        flex: 1;
+
+        h2 {
+            max-width: 576px;
+            width: 100%;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+            margin-top: 24px;
+
+            li {
+                display: flex;
+                align-items: flex-start;
+                column-gap: 16px;
+                font-size: 16px;
+                font-weight: 500;
+                color: $color-51;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+
+        p {
+            display: none;
+            margin-top: 32px;
+            font-size: 14px;
+            color: #4B5563;
+
+            @include media-breakpoint-up(lg) {
+                display: block;
+            }
+
+        }
+    }
+
+    &_right {
+        width: 42%;
+        display: flex;
+        gap: 14px;
+
+        .slider {
+            width: 50%;
+
+            div {
+                height: 100%;
+            }
+
+            .slick-slide {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                margin: 6px 0;
+                height: 336px !important;
+
+                img {
+                    object-fit: cover;
+                    border-radius: 24px;
+                    background-color: #EAF7F5;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
