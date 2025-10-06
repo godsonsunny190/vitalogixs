@@ -11134,7 +11134,7 @@ h3, .h3 {
 /*      PRODUCTS HERO SECTION STYLE      */
 /* ===================================== */
 .producthero {
-  background-color: #F2F0FA;
+  background-color: #F3F9EB;
   padding: 36px 0;
   overflow: hidden;
 }
@@ -11292,7 +11292,7 @@ h3, .h3 {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 24px;
-  background-color: #EBE7F8;
+  background-color: #F3F9EB;
   gap: 4.5px;
 }
 @media (min-width: 768px) {
@@ -11469,7 +11469,6 @@ h3, .h3 {
 @media (min-width: 768px) {
   .weightcalc_right img {
     aspect-ratio: 600/520;
-    object-fit: contain;
   }
 }
 
@@ -11532,7 +11531,7 @@ h3, .h3 {
   width: 225px;
   padding: 16px;
   border-radius: 24px;
-  background-color: #EBE7F8;
+  background-color: #F3F9EB;
 }
 @media (min-width: 768px) {
   .offerings_slider .slick-slide {
@@ -11677,6 +11676,9 @@ h3, .h3 {
     width: 46.9%;
   }
 }
+.twoblock_right img {
+  border-radius: 20px;
+}
 
 /* ===================================== */
 /*       HOW ITS WORK SECTION STYLE      */
@@ -11771,7 +11773,7 @@ h3, .h3 {
   font-weight: 500;
   line-height: normal;
   text-align: center;
-  background-color: #F2F0FA;
+  background-color: #F3F9EB;
   color: #4342CA;
 }
 @media (min-width: 768px) {

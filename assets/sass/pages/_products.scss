@@ -2,7 +2,7 @@
 /*      PRODUCTS HERO SECTION STYLE      */
 /* ===================================== */
 .producthero {
-    background-color: $primary-clr;
+    background-color: $color-fresh-lime-light;
     padding: 36px 0;
     overflow: hidden;
 
@@ -174,7 +174,7 @@
         flex-direction: column;
         justify-content: space-between;
         border-radius: 24px;
-        background-color: $secondary-clr;
+        background-color: $color-fresh-lime-light;
         gap: 4.5px;
 
         @include media-breakpoint-up(md) {
@@ -361,7 +361,6 @@
 
             @include media-breakpoint-up(md) {
                 aspect-ratio: 600 / 520;
-                object-fit: contain;
             }
 
         }
@@ -429,7 +428,7 @@
             width: 225px;
             padding: 16px;
             border-radius: 24px;
-            background-color: $secondary-clr;
+            background-color: $color-fresh-lime-light;
 
             @include media-breakpoint-up(md) {
                 margin-left: 24px;
@@ -584,6 +583,10 @@
             width: 46.9%;
         }
 
+        img {
+            border-radius: 20px;
+        }
+
     }
 
 }
@@ -682,7 +685,7 @@
             font-weight: 500;
             line-height: normal;
             text-align: center;
-            background-color: $primary-clr;
+            background-color: $color-fresh-lime-light;
             color: $color-ca;
 
             @include media-breakpoint-up(md) {
