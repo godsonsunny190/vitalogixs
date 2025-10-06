@@ -908,7 +908,7 @@
 
         @include media-breakpoint-up(lg) {
             display: block;
-            max-width: 710px;
+            max-width: 45%;
             margin-left: auto;
         }
     }
@@ -921,14 +921,15 @@
         }
     }
 
+    &_wrapper {
+        display: flex;
+        flex-direction: column;
+    }
 
     &_content {
         display: flex;
         flex-direction: column;
         row-gap: 24px;
-        top: 0;
-        width: 89.3%;
-        position: absolute;
         padding: 32px 0;
         color: $color-37;
 
@@ -936,6 +937,9 @@
             row-gap: 32px;
             width: 46.876%;
             padding: 96px 0;
+            top: 0;
+            width: 89.3%;
+            position: absolute;
         }
 
         ul {
@@ -969,9 +973,11 @@
         p {
             font-size: 12px;
             font-weight: 400;
+            width: 100%;
 
             @include media-breakpoint-up(lg) {
                 font-size: 14px;
+                max-width: 652px;
             }
 
         }

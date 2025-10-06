@@ -11974,7 +11974,7 @@ h3, .h3 {
 @media (min-width: 992px) {
   .benefit .desktop {
     display: block;
-    max-width: 710px;
+    max-width: 45%;
     margin-left: auto;
   }
 }
@@ -11986,13 +11986,14 @@ h3, .h3 {
     display: none;
   }
 }
+.benefit_wrapper {
+  display: flex;
+  flex-direction: column;
+}
 .benefit_content {
   display: flex;
   flex-direction: column;
   row-gap: 24px;
-  top: 0;
-  width: 89.3%;
-  position: absolute;
   padding: 32px 0;
   color: #1f2a37;
 }
@@ -12001,6 +12002,9 @@ h3, .h3 {
     row-gap: 32px;
     width: 46.876%;
     padding: 96px 0;
+    top: 0;
+    width: 89.3%;
+    position: absolute;
   }
 }
 .benefit_content ul {
@@ -12033,10 +12037,12 @@ h3, .h3 {
 .benefit_content p {
   font-size: 12px;
   font-weight: 400;
+  width: 100%;
 }
 @media (min-width: 992px) {
   .benefit_content p {
     font-size: 14px;
+    max-width: 652px;
   }
 }
 .benefit_content .primary-btn {
