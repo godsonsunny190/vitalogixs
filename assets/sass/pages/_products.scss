@@ -896,6 +896,8 @@
 
 .benefit {
     padding: 32px 0;
+    background-color: #cce0b5;
+    margin-top: 80px;
 
     @include media-breakpoint-up(lg) {
         padding: 48px 0;
@@ -906,6 +908,8 @@
 
         @include media-breakpoint-up(lg) {
             display: block;
+            max-width: 710px;
+            margin-left: auto;
         }
     }
 

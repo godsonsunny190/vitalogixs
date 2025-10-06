@@ -11960,6 +11960,8 @@ h3, .h3 {
 /* ===================================== */
 .benefit {
   padding: 32px 0;
+  background-color: #cce0b5;
+  margin-top: 80px;
 }
 @media (min-width: 992px) {
   .benefit {
@@ -11972,6 +11974,8 @@ h3, .h3 {
 @media (min-width: 992px) {
   .benefit .desktop {
     display: block;
+    max-width: 710px;
+    margin-left: auto;
   }
 }
 .benefit .mobile {
@@ -12147,5 +12151,9 @@ h3, .h3 {
     font-size: 18px;
   }
 }
+
+/* ===================================== */
+/*           MULTISLIER BANNER           */
+/* ===================================== */
 
 /*# sourceMappingURL=style.css.map */
