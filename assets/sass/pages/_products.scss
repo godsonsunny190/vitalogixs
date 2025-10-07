@@ -1112,38 +1112,27 @@
 /*          CONTACT SECTION STYLE        */
 /* ===================================== */
 
-$color-primary: #0f766e;
-$color-dark: #111827;
-$color-white: #ffffff;
-$radius-xl: 24px;
+
+
+
 
 .contact {
     padding: 16px 0;
 
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        padding: 16px;
-    }
-
-    &__card {
-        background-color: $color-primary;
+    &_card {
+        background-color: $color-6c;
         display: flex;
         flex-direction: column;
-        border-radius: $radius-xl;
+        border-radius: 24px;
         box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         overflow: hidden;
-        width: 100%;
-        max-width: 1152px; // 72rem
 
         @include media-breakpoint-up(md) {
             flex-direction: row;
         }
     }
 
-    &__content {
+    &_content {
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -1157,84 +1146,83 @@ $radius-xl: 24px;
         @include media-breakpoint-up(lg) {
             padding: 64px;
         }
-    }
 
-    &__title {
-        font-size: 36px;
-        line-height: 1.2;
-        font-weight: 700;
-        color: $color-white;
-        margin-bottom: 16px;
+        h2 {
+            color: $white-clr;
+        }
 
-        @include media-breakpoint-up(md) {
-            font-size: 48px;
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: $white-clr;
+            margin-top: 16px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+            }
+
         }
     }
 
-    &__text {
-        font-size: 18px;
-        color: $color-white;
-        opacity: 0.9;
-        margin-bottom: 32px;
-    }
 
-    &__form {
+    &_form {
         display: flex;
         flex-direction: column;
         row-gap: 16px;
+        margin-top: 12px;
 
         @include media-breakpoint-up(sm) {
             flex-direction: row;
             column-gap: 12px;
         }
-    }
 
-    &__input {
-        flex: 1;
-        padding: 12px 16px;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        color: $color-dark;
-        outline: none;
-        transition: box-shadow 0.3s ease;
+        input {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            color: $black-clr;
+            outline: none;
+            transition: box-shadow 0.3s ease;
 
-        &:focus {
-            box-shadow: 0 0 0 2px $color-white;
+            &:focus {
+                box-shadow: 0 0 0 2px $white-clr;
+            }
+        }
+
+        button {
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 8px;
+            background-color: $color-28;
+            color: $white-clr;
+            flex: 1;
+            padding: 11px 0;
+            border: 1px solid $color-28;
+            transition: all 0.3s ease-in-out;
+            max-width: 132px;
+            width: 100%;
+
+            &:hover {
+                background-color: lighten($black-clr, 10%);
+            }
         }
     }
 
-    &__button {
-        background-color: $color-dark;
-        color: $color-white;
-        font-weight: 600;
-        padding: 12px 16px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
 
-        &:hover {
-            background-color: lighten($color-dark, 10%);
-        }
-    }
-
-    &__note {
+    &_note {
         font-size: 14px;
-        color: $color-white;
+        color: $white-clr;
         opacity: 0.8;
         margin-top: 24px;
         display: block;
     }
 
-    &__image-side {
+    &_image {
         flex: 1;
         width: 100%;
     }
 
-    &__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 }
