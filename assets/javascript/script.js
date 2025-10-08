@@ -336,6 +336,55 @@ var swiper = new Swiper(".faviorites_slider", {
 });
 
 /* ===================================== */
+/*             PRODUCT SLIDER            */
+/* ===================================== */
+var swiper = new Swiper(".pdtslider_slider", {
+  slidesPerView: 3.7,
+  spaceBetween: 24,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-unique",
+    prevEl: ".swiper-button-prev-unique",
+  },
+  speed: 1000,
+  // autoplay: {
+  //   delay: 1500,
+  //   disableOnInteraction: false,
+  // },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+    },
+
+    640: {
+      slidesPerView: 2.2,
+      spaceBetween: 16,
+    },
+
+    991: {
+      slidesPerView: 2.2,
+      spaceBetween: 20,
+    },
+
+    1024: {
+      slidesPerView: 3.2,
+      spaceBetween: 20,
+    },
+
+    1280: {
+      slidesPerView: 3.7,
+      spaceBetween: 24,
+    },
+  },
+});
+
+/* ===================================== */
 /*              MUTLI SLIDER             */
 /* ===================================== */
 
@@ -450,6 +499,50 @@ $(".marquee-service").slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+      },
+    },
+  ],
+});
+
+/* ===================================== */
+/*            THUMB SLIDER JS            */
+/* ===================================== */
+
+$(".slider-content").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  fade: false,
+  infinite: true,
+  speed: 1000,
+  asNavFor: ".slider-thumb",
+  arrows: true,
+});
+
+$(".slider-thumb").slick({
+  slidesToShow: 6,
+  slidesToScroll: 4,
+  asNavFor: ".slider-content",
+  dots: false,
+  focusOnSelect: true,
+
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 5,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 4,
+      },
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 3,
       },
     },
   ],
