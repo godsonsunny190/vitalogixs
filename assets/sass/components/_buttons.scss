@@ -9,6 +9,7 @@
      padding: 11px 0;
      border: 1px solid #111928;
      transition: all 0.3s ease-in-out;
+     text-align: center;
 
      @include media-breakpoint-up(lg) {
          font-size: 16px;
@@ -31,6 +32,7 @@
      border: 1px solid $color-37;
      flex: 1;
      padding: 11px 0;
+     text-align: center;
 
      @include media-breakpoint-up(lg) {
          font-size: 16px;

@@ -11267,6 +11267,7 @@ h3, .h3 {
   padding: 11px 0;
   border: 1px solid #111928;
   transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 @media (min-width: 992px) {
   .primary-btn {
@@ -11289,6 +11290,7 @@ h3, .h3 {
   border: 1px solid #1f2a37;
   flex: 1;
   padding: 11px 0;
+  text-align: center;
 }
 @media (min-width: 992px) {
   .secondery-btn {
