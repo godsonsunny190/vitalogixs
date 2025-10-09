@@ -667,6 +667,152 @@
     }
 }
 
+/* ===================================== */
+/*            FAQ SECTION STYLE          */
+/* ===================================== */
+
+.faq-2 {
+    background-color: $color-fb;
+    padding-top: 60px;
+    padding-bottom: 100px;
+
+    &_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 24px;
+        height: 100%;
+
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+            column-gap: 64px;
+        }
+
+    }
+
+    &_content {
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+        }
+
+        p {
+            color: $color-63;
+            font-size: 16px;
+            margin-top: 16px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+            }
+
+        }
+    }
+
+    &_accordion {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        justify-content: center;
+
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+        }
+
+        .accordion {
+
+            &-item {
+                border-radius: 20px;
+                border: none;
+
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+            }
+
+            &-header {
+                display: flex;
+                align-items: center;
+
+                span {
+                    margin-left: 16px;
+                    background-color: #047481;
+                    color: $color-fb;
+                    display: flex;
+                    align-items: center;
+                    padding: 4px 8px;
+                    border-radius: 20px;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 1.1 !important;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 18px;
+                    }
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                        margin-right: 8px;
+
+                        @include media-breakpoint-up(lg) {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                    }
+
+                }
+            }
+
+            &-button {
+                overflow: hidden;
+                width: 100%;
+                padding: 16px;
+                box-shadow: none;
+                background-color: #ffffff;
+                border-radius: 20px !important;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 125%;
+                color: $color-37;
+
+                @include media-breakpoint-up(lg) {
+                    padding: 24px;
+                    font-size: 20px;
+                }
+
+                &::after {
+                    background-image: url(../images/icons/arrow-down.svg);
+                    background-size: cover;
+                    width: 22px;
+                    height: 22px;
+
+                    @include media-breakpoint-up(md) {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+
+            &-body {
+                padding: 0 24px 12px 24px;
+
+                p {
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: $color-63;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
 .offcanvas.offcanvas-end.safety-offcanvas {
     width: 536px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);

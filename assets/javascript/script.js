@@ -360,7 +360,7 @@ var swiper = new Swiper(".faviorites_slider", {
 var swiper = new Swiper(".pdtslider_slider", {
   slidesPerView: 3.7,
   spaceBetween: 24,
-  loop: true,
+  // loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -407,72 +407,38 @@ var swiper = new Swiper(".pdtslider_slider", {
 /*              MUTLI SLIDER             */
 /* ===================================== */
 
-$(".mutislider-1").slick({
-  speed: 5000,
-  autoplay: true,
-  autoplaySpeed: 0,
-  centerMode: false,
-  cssEase: "linear",
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  infinite: true,
-  arrows: false,
-  pauseOnHover: true,
-  vertical: true,
-  verticalSwiping: true,
+$(document).ready(function () {
+  $(".mutislider-1").slick({
+    speed: 5000,
+    autoplay: true,
+    autoplaySpeed: 1,
+    centerMode: false,
+    cssEase: "linear",
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+    pauseOnHover: false,
+    vertical: true,
+    verticalSwiping: true,
+  });
 
-  responsive: [
-    {
-      breakpoint: 991,
-      settings: {
-        vertical: false,
-        verticalSwiping: false,
-        slidesToShow: 3,
-      },
-    },
-    {
-      breakpoint: 578,
-      settings: {
-        vertical: false,
-        verticalSwiping: false,
-        slidesToShow: 1.5,
-      },
-    },
-  ],
+  $(".mutislider-2").slick({
+    speed: 8000,
+    autoplay: true,
+    autoplaySpeed: 1,
+    centerMode: false,
+    cssEase: "linear",
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+    pauseOnHover: false,
+    vertical: true,
+    verticalSwiping: true,
+  });
 });
-$(".mutislider-2").slick({
-  speed: 8000,
-  autoplay: true,
-  autoplaySpeed: 0,
-  centerMode: false,
-  cssEase: "linear",
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  infinite: true,
-  arrows: false,
-  pauseOnHover: true,
-  vertical: true,
-  verticalSwiping: true,
 
-  responsive: [
-    {
-      breakpoint: 991,
-      settings: {
-        vertical: false,
-        verticalSwiping: false,
-        slidesToShow: 3,
-      },
-    },
-    {
-      breakpoint: 578,
-      settings: {
-        vertical: false,
-        verticalSwiping: false,
-        slidesToShow: 1.5,
-      },
-    },
-  ],
-});
 /* ===================================== */
 /*         SERVICES MARQUEE SLIDER       */
 /* ===================================== */
