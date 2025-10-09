@@ -411,31 +411,58 @@ $(document).ready(function () {
   $(".mutislider-1").slick({
     speed: 5000,
     autoplay: true,
-    autoplaySpeed: 1,
+    autoplaySpeed: 0,
     centerMode: false,
     cssEase: "linear",
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
     arrows: false,
-    pauseOnHover: false,
+    pauseOnHover: true,
     vertical: true,
     verticalSwiping: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: { vertical: false, verticalSwiping: false, slidesToShow: 3 },
+      },
+      {
+        breakpoint: 578,
+        settings: {
+          vertical: false,
+          verticalSwiping: false,
+          slidesToShow: 1.5,
+        },
+      },
+    ],
   });
-
   $(".mutislider-2").slick({
     speed: 8000,
     autoplay: true,
-    autoplaySpeed: 1,
+    autoplaySpeed: 0,
     centerMode: false,
     cssEase: "linear",
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
     arrows: false,
-    pauseOnHover: false,
+    pauseOnHover: true,
     vertical: true,
     verticalSwiping: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: { vertical: false, verticalSwiping: false, slidesToShow: 3 },
+      },
+      {
+        breakpoint: 578,
+        settings: {
+          vertical: false,
+          verticalSwiping: false,
+          slidesToShow: 1.5,
+        },
+      },
+    ],
   });
 });
 
