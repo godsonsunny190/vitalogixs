@@ -404,6 +404,55 @@ var swiper = new Swiper(".pdtslider_slider", {
 });
 
 /* ===================================== */
+/*               STAGE SLIDER            */
+/* ===================================== */
+var swiper = new Swiper(".stage_slider", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-unique",
+    prevEl: ".swiper-button-prev-unique",
+  },
+  speed: 1000,
+  // autoplay: {
+  //   delay: 1500,
+  //   disableOnInteraction: false,
+  // },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+    },
+
+    640: {
+      slidesPerView: 2.2,
+      spaceBetween: 16,
+    },
+
+    991: {
+      slidesPerView: 2.2,
+      spaceBetween: 20,
+    },
+
+    1024: {
+      slidesPerView: 3.2,
+      spaceBetween: 20,
+    },
+
+    1280: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
+});
+
+/* ===================================== */
 /*              MUTLI SLIDER             */
 /* ===================================== */
 
