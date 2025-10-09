@@ -13203,14 +13203,6 @@ h3, .h3 {
   }
 }
 
-.safety-panel {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  border-radius: 20px 20px 0 0;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  padding-bottom: 16px;
-}
 .safety-panel p {
   margin: 20px 0;
 }

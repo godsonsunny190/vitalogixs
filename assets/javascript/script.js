@@ -7,6 +7,9 @@ function initLenis() {
   lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    // Prevent Lenis from affecting elements with data-lenis-prevent attribute
+    prevent: (node) =>
+      node.classList.contains("offcanvas") || node.closest(".offcanvas"),
   });
 
   function raf(time) {
@@ -19,21 +22,37 @@ function initLenis() {
 }
 
 initLenis();
-document.addEventListener("DOMContentLoaded", function () {
-  const modal = document.getElementById("exampleModal");
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Handle modal
+  const modal = document.getElementById("exampleModal");
   if (modal) {
     modal.addEventListener("show.bs.modal", function () {
       if (lenis) {
-        lenis.destroy();
-        lenis = null;
+        lenis.stop();
       }
     });
 
     modal.addEventListener("hidden.bs.modal", function () {
-      setTimeout(() => {
-        initLenis();
-      }, 100);
+      if (lenis) {
+        lenis.start();
+      }
+    });
+  }
+
+  // Handle offcanvas
+  const offcanvas = document.getElementById("offcanvasRight");
+  if (offcanvas) {
+    offcanvas.addEventListener("show.bs.offcanvas", function () {
+      if (lenis) {
+        lenis.stop();
+      }
+    });
+
+    offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+      if (lenis) {
+        lenis.start();
+      }
     });
   }
 });
