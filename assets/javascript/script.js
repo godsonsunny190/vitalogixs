@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     ScrollTrigger.create({
       trigger: elem,
-      start: "top 85%",
+      start: "top 100%",
       end: "bottom 15%",
       markers: false,
       toggleActions: "play none none reverse",
