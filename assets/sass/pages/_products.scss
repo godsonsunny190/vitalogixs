@@ -202,6 +202,7 @@
             font-size: 18px;
             color: $color-37;
             line-height: 23px;
+            text-transform: capitalize;
 
             @include media-breakpoint-up(md) {
                 margin-bottom: 8px;
@@ -808,6 +809,7 @@
 /* ===================================== */
 
 .related {
+    padding-top: 100px;
     padding: 32px 0;
     display: flex;
     flex-direction: column;
@@ -898,114 +900,6 @@
             }
 
         }
-    }
-}
-
-/* ===================================== */
-/*          BENIFIT SECTION STYLE        */
-/* ===================================== */
-
-.benefit {
-    padding: 32px 0;
-    background-color: $color-ff;
-    margin-top: 60px;
-
-    @include media-breakpoint-up(lg) {
-        padding: 48px 0;
-        margin-top: 80px;
-    }
-
-    .desktop {
-        display: none;
-
-        @include media-breakpoint-up(lg) {
-            display: block;
-            max-width: 45%;
-            margin-left: auto;
-        }
-    }
-
-    .mobile {
-        display: block;
-
-        @include media-breakpoint-up(lg) {
-            display: none;
-        }
-    }
-
-    &_wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &_content {
-        display: flex;
-        flex-direction: column;
-        row-gap: 24px;
-        padding: 32px 0;
-        color: $color-37;
-
-        @include media-breakpoint-up(lg) {
-            row-gap: 32px;
-            width: 46.876%;
-            padding: 96px 0;
-            top: 0;
-            width: 89.3%;
-            position: absolute;
-        }
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            row-gap: 12px;
-
-            @include media-breakpoint-up(lg) {
-                row-gap: 16px;
-            }
-
-            li {
-                display: flex;
-                align-items: center;
-                column-gap: 12px;
-                font-size: 16px;
-                font-weight: 500;
-
-                @include media-breakpoint-up(lg) {
-                    font-size: 18px;
-                    line-height: 150%;
-                }
-
-                img {
-                    width: 24px;
-                    height: 24px;
-                }
-            }
-        }
-
-        p {
-            font-size: 12px;
-            font-weight: 400;
-            width: 100%;
-
-            @include media-breakpoint-up(lg) {
-                font-size: 14px;
-                max-width: 652px;
-            }
-
-        }
-
-        .primary-btn {
-            padding: 14px 24px;
-            width: fit-content;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-
-            img {
-                width: auto;
-            }
-        }
-
     }
 }
 

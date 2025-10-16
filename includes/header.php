@@ -24,35 +24,100 @@
 
     <!-- HEADER SECTION STARTS HERE -->
     <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark p-0" aria-label="Offcanvas navbar large">
+        <nav class="navbar p-0" aria-label="Offcanvas navbar large">
             <div class="container">
                 <div class="header_logo">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand d-block m-0" href="index.html">
                         <img src="./assets/images/logo/logo.png" alt="">
                     </a>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
-                    <span class="navbar-toggler-icon"></span>
+                    <img src="./assets/images/header/menu.svg" alt="">
                 </button>
                 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
                     aria-labelledby="offcanvasNavbar2Label">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    <div class="offcanvas-header p-0">
+                        <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
+                        <button type="button" class="btn-close opacity-100" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Blogs</a></li>
-                            <li><a href="">Products</a></li>
-                            <li><a href="">Contact</a></li>
-                        </ul>
+                        <div class="offcanvas-menu">
+                            <h5>Discover</h5>
+                            <ul>
+                                <li><a href="weight-loss.php">Weight Loss<img class="w-auto"
+                                            src="./assets/images/header/navbar2-chevron-right.svg" alt=""></a></li>
+                                <li><a href="ed.php">Erectile Dysfunction<img class="w-auto"
+                                            src="./assets/images/header/navbar2-chevron-right.svg" alt=""></a></li>
+                                <li><a href="mental-health.php">Mental Health <img class="w-auto"
+                                            src="./assets/images/header/navbar2-chevron-right.svg" alt=""></a></li>
+                                <li><a href="wellness-longetivity.php">Wellness / Longetivity <img class="w-auto"
+                                            src="./assets/images/header/navbar2-chevron-right.svg" alt=""></a></li>
+                                <li><a href="mens-health.php">Men's Health <img class="w-auto"
+                                            src="./assets/images/header/navbar2-chevron-right.svg" alt=""></a></li>
+                                <li><a href="dna.php">Epigenetic and DNA Testing <img class="w-auto"
+                                            src="./assets/images/header/navbar2-chevron-right.svg" alt=""></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="offcanvas-menu d-none">
+                            <h5>Favorites</h5>
+                            <div class="swiper faviorites_slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" style="background-color: #CCFBF1;">
+                                        <div class="swiper-content">
+                                            <span style="background-color: #036672;">HRT</span>
+                                            <h4>Sermorelin</h4>
+                                        </div>
+
+                                        <div class="swiper-img">
+                                            <img src="./assets/images/products/sermorelin-favorites.png" alt="images">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide" style="background-color: #CCFBF1;">
+                                        <div class="swiper-content">
+                                            <span style="background-color: #036672;">HRT</span>
+                                            <h4>Sermorelin</h4>
+                                        </div>
+
+                                        <div class="swiper-img">
+                                            <img src="./assets/images/products/sermorelin-favorites.png" alt="images">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide" style="background-color: #CCFBF1;">
+                                        <div class="swiper-content">
+                                            <span style="background-color: #036672;">HRT</span>
+                                            <h4>Sermorelin</h4>
+                                        </div>
+
+                                        <div class="swiper-img">
+                                            <img src="./assets/images/products/sermorelin-favorites.png" alt="images">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-button">
+                                    <div class="swiper-button-next-unique">
+                                        <img src="./assets/images/header/slider-arrow.svg" alt="icons">
+                                    </div>
+                                    <div class="swiper-button-prev-unique">
+                                        <img src="./assets/images/header/slider-arrow.svg" alt="icons">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="offcanvas-menu">
+                            <h5>More on Vitalogixs</h5>
+                            <ul>
+                                <li><a href="">About Us</a></li>
+                                <li><a href="">How It Works</a></li>
+                                <li><a href="">Contact Us </a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
         </nav>
     </header>
     <!-- HEADER SECTION ENDS HERE -->

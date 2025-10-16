@@ -11534,6 +11534,7 @@ h3, .h3 {
   font-size: 18px;
   color: #1f2a37;
   line-height: 23px;
+  text-transform: capitalize;
 }
 @media (min-width: 768px) {
   .product_card h4, .product_card .h4 {
@@ -12090,6 +12091,7 @@ h3, .h3 {
 /*    RELATED PRODUCTS SECTION STYLE     */
 /* ===================================== */
 .related {
+  padding-top: 100px;
   padding: 32px 0;
   display: flex;
   flex-direction: column;
@@ -12176,108 +12178,6 @@ h3, .h3 {
   .related .swiper-slide a {
     padding: 14px 24px;
   }
-}
-
-/* ===================================== */
-/*          BENIFIT SECTION STYLE        */
-/* ===================================== */
-.benefit {
-  padding: 32px 0;
-  background-color: #EFF8FF;
-  margin-top: 60px;
-}
-@media (min-width: 992px) {
-  .benefit {
-    padding: 48px 0;
-    margin-top: 80px;
-  }
-}
-.benefit .desktop {
-  display: none;
-}
-@media (min-width: 992px) {
-  .benefit .desktop {
-    display: block;
-    max-width: 45%;
-    margin-left: auto;
-  }
-}
-.benefit .mobile {
-  display: block;
-}
-@media (min-width: 992px) {
-  .benefit .mobile {
-    display: none;
-  }
-}
-.benefit_wrapper {
-  display: flex;
-  flex-direction: column;
-}
-.benefit_content {
-  display: flex;
-  flex-direction: column;
-  row-gap: 24px;
-  padding: 32px 0;
-  color: #1f2a37;
-}
-@media (min-width: 992px) {
-  .benefit_content {
-    row-gap: 32px;
-    width: 46.876%;
-    padding: 96px 0;
-    top: 0;
-    width: 89.3%;
-    position: absolute;
-  }
-}
-.benefit_content ul {
-  display: flex;
-  flex-direction: column;
-  row-gap: 12px;
-}
-@media (min-width: 992px) {
-  .benefit_content ul {
-    row-gap: 16px;
-  }
-}
-.benefit_content ul li {
-  display: flex;
-  align-items: center;
-  column-gap: 12px;
-  font-size: 16px;
-  font-weight: 500;
-}
-@media (min-width: 992px) {
-  .benefit_content ul li {
-    font-size: 18px;
-    line-height: 150%;
-  }
-}
-.benefit_content ul li img {
-  width: 24px;
-  height: 24px;
-}
-.benefit_content p {
-  font-size: 12px;
-  font-weight: 400;
-  width: 100%;
-}
-@media (min-width: 992px) {
-  .benefit_content p {
-    font-size: 14px;
-    max-width: 652px;
-  }
-}
-.benefit_content .primary-btn {
-  padding: 14px 24px;
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.benefit_content .primary-btn img {
-  width: auto;
 }
 
 /* ===================================== */
