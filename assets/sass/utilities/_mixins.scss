@@ -1,0 +1,54 @@
+// Center both vertically & horizontally
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Horizontal space between
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Horizontal space around
+@mixin flexAround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// Align to start horizontally & vertically
+@mixin flexStart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+// Align to end horizontally & vertically
+@mixin flexEnd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+// Column direction center
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+// Column direction center
+@mixin flexColumnCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin alignCenter {
+    display: flex;
+    align-items: center;
+}

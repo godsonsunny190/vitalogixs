@@ -1,0 +1,35 @@
+.mt-24 {
+    margin-top: 24px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-56 {
+    margin-top: 56px;
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+.mt-88 {
+    margin-top: 88px;
+
+    @media (max-width: 575.98px) {
+        margin-top: 80px;
+    }
+}
+
+.mt-96 {
+    margin-top: 96px;
+
+    @media (max-width: 767.98px) {
+        margin-top: 88px;
+    }
+}
+
+.mt-98 {
+    margin-top: 98px;
+}

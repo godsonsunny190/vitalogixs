@@ -1,0 +1,40 @@
+ .primary-btn {
+     font-size: 14px;
+     font-weight: 500;
+     padding: 2px 0;
+     border-radius: 60px;
+     background-color: $color-28;
+     color: $white-clr;
+     flex: 1;
+     padding: 11px 0;
+     border: 1px solid #111928;
+     transition: all 0.3s ease-in-out;
+     text-align: center;
+
+     @include media-breakpoint-up(lg) {
+         font-size: 16px;
+     }
+
+     &:hover {
+         background-color: transparent;
+         color: $color-28;
+         transition: all 0.3s ease-in-out;
+     }
+ }
+
+ .secondery-btn {
+     font-size: 14px;
+     font-weight: 500;
+     padding: 2px 0;
+     border-radius: 60px;
+     background-color: transparent;
+     color: $color-37;
+     border: 1px solid $color-37;
+     flex: 1;
+     padding: 11px 0;
+     text-align: center;
+
+     @include media-breakpoint-up(lg) {
+         font-size: 16px;
+     }
+ }

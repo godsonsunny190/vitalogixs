@@ -1,0 +1,186 @@
+.header {
+    border-bottom: 1px solid $border-color;
+    padding: 16px 0;
+
+    &_logo {
+        img {
+            max-width: 205px;
+        }
+    }
+
+    .offcanvas {
+        background-color: $color-fb !important;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        padding: 24px 16px;
+        overflow-y: auto;
+
+        &.offcanvas-end {
+            width: 420px;
+        }
+
+        &-header {
+            h5 {
+                color: $black-clr;
+                font-size: 18px;
+                font-weight: 500;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &-body {
+            padding: 1px;
+            overflow: visible;
+        }
+
+        &-menu {
+            position: relative;
+            margin-top: 16px;
+            padding: 8px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
+                0 1px 2px rgba(0, 0, 0, 0.06);
+
+
+            h5 {
+                padding: 8px;
+                text-transform: uppercase;
+                color: #6B7280;
+                font-size: 12px;
+                font-weight: 600;
+
+                @include media-breakpoint-up(md) {
+                    padding: 12px 8px;
+                }
+
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                column-gap: 24px;
+
+
+                li {
+
+                    a {
+                        font-size: 16px;
+                        line-height: 28px;
+                        color: $color-37;
+                        padding: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-radius: 8px;
+
+                        @include media-breakpoint-up(md) {
+                            font-size: 18px;
+                            padding: 12px;
+                        }
+
+                        &:hover {
+                            background-color: $color-f6;
+                        }
+
+                    }
+
+                }
+            }
+
+            .swiper {
+                &-slide {
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 16px;
+                    min-height: 272px;
+
+                    span {
+                        border-radius: 20px;
+                        color: $color-fb;
+                        font-size: 11px;
+                        line-height: 150%;
+                        padding: 2px 8px;
+                        width: fit-content;
+
+                        @include media-breakpoint-up(md) {
+                            font-size: 12px;
+                        }
+                    }
+
+                    h4 {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 1;
+                        margin-top: 8px;
+                        color: $black-clr;
+
+                        @include media-breakpoint-up(md) {
+                            font-size: 16px;
+                        }
+
+                    }
+                }
+
+                &-content {
+                    padding: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 6px;
+
+                    @include media-breakpoint-up(md) {
+                        padding: 16px;
+                        row-gap: 8px;
+                    }
+
+                }
+
+                &-button {
+                    margin-top: 24px;
+                    margin-bottom: 8px;
+                    display: flex;
+                    flex-direction: row;
+                    column-gap: 10px;
+                    padding-right: 20px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    justify-content: flex-end;
+
+                    @include media-breakpoint-up(xl) {
+                        margin-top: 40px;
+                    }
+
+                    @media (min-width: 1581px) {
+                        padding-right: 0;
+                    }
+
+                    .swiper-button-next-unique,
+                    .swiper-button-prev-unique {
+                        color: $color-37;
+                        cursor: pointer;
+                        background-color: $color-f6;
+                        border-radius: 9999px;
+                        width: 32px;
+                        height: 32px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: 16px;
+                            height: 12px;
+                        }
+
+                    }
+
+                    .swiper-button-next-unique {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}
