@@ -122,13 +122,83 @@
 
 }
 
+/* ===================================== */
+/*          QUALITY SECTION STYLE        */
+/* ===================================== */
+.quality {
+    margin-top: 50px;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 100px;
+    }
+
+    .section-title {
+        p {
+            max-width: 910px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &_wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+        margin-top: 24px;
+
+        @include media-breakpoint-up(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &_item {
+        border-radius: 26px;
+        border: 1px solid #0000001a;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: .3s all ease;
+
+        h5 {
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-top: 20px;
+            margin-bottom: 14px;
+        }
+
+        &:hover {
+            transition: .3s all ease;
+            background-color: #0f766e;
+        }
+    }
+
+    &_icon {
+        margin: 28px 18px 18px 18px;
+    }
+
+    &_content {
+        margin-top: 70px;
+        background-color: #f6f5f2;
+        border-radius: 26px;
+        padding: 30px 20px 20px 20px;
+        min-height: 203px;
+    }
+}
 
 
 /* ===================================== */
 /*       GET ACCESS SECTION STYLE        */
 /* ===================================== */
-
-
 .access {
     margin-top: 100px;
     background-color: #5b86a4;
@@ -212,7 +282,7 @@
         background: rgba(0, 0, 0, 0.12);
         backdrop-filter: blur(1.25rem);
         border-radius: 26px;
-        padding: 40px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -220,10 +290,6 @@
         position: relative;
         overflow: hidden;
 
-        @media (max-width: 768px) {
-            padding: 30px;
-            border-radius: 20px;
-        }
 
         &::before {
             content: '';
@@ -235,7 +301,6 @@
             pointer-events: none;
         }
 
-        // Weight Loss Card
         &-weightloss {
             grid-column: 1;
             grid-row: 1 / 3;
@@ -251,7 +316,7 @@
             }
         }
 
-        // Men's Health Card
+
         &-menshealth {
             grid-column: 2 / 4;
             grid-row: 1;
@@ -273,7 +338,7 @@
             }
         }
 
-        // Treatment Card
+
         &-treatment {
             grid-column: 2;
             grid-row: 2;
@@ -289,7 +354,7 @@
             }
         }
 
-        // Mental Health Card
+
         &-mentalhealth {
             grid-column: 3;
             grid-row: 2;

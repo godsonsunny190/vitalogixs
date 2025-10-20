@@ -8,6 +8,23 @@
         }
     }
 
+    &_connet {
+        display: flex;
+
+        a {
+            font-size: 16px;
+            color: #1F2937;
+            margin-top: 16px;
+            margin-bottom: 24px;
+
+            @include media-breakpoint-up(md) {
+                font-size: 18px;
+                margin-top: 24px;
+            }
+
+        }
+    }
+
     .offcanvas {
         background-color: $color-fb !important;
         border-top-left-radius: 20px;
