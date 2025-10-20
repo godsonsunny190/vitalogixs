@@ -55,6 +55,7 @@
         padding: 19px 24px 9px 24px;
         cursor: pointer;
         transition: .3s all ease;
+        position: relative;
 
         .icon {
             height: 12px;
@@ -87,6 +88,21 @@
 
             h4 {
                 color: $white-clr;
+            }
+        }
+
+        &-url {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+
+            a {
+                height: 100%;
+                width: 100%;
+                display: block;
             }
         }
     }
