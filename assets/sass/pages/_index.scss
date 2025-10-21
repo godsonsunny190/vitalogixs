@@ -305,7 +305,38 @@
 
     &_btn {
         text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        a {
+            backdrop-filter: blur(20px);
+            background-color: $white-clr;
+            padding: 13px 28px;
+            color: $black-clr;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all .3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.17);
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.33);
+                color: rgb(255, 255, 255);
+                transition: all .3s ease;
+            }
+
+            &.btn-2 {
+                backdrop-filter: blur(20px);
+                background-color: rgba(255, 255, 255, 0.07);
+                color: $white-clr;
+            }
+        }
     }
+
 
     &_wrapper {
         display: flex;
