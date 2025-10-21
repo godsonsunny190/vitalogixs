@@ -765,3 +765,29 @@ tl.fromTo(
   },
   "<"
 );
+
+
+
+/* ===================================== */
+/*               ACCESS SLIDER            */
+/* ===================================== */
+var swiper = new Swiper(".access_slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  speed: 1000,
+  // autoplay: {
+  //   delay: 1500,
+  //   disableOnInteraction: false,
+  // },
+});

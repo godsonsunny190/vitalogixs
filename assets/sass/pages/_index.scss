@@ -199,7 +199,7 @@
 
     &_item {
         border-radius: 26px;
-        border: 1px solid #0000001a;
+        border: 1px solid #e6f0f8;
         padding: 12px;
         display: flex;
         flex-direction: column;
@@ -308,18 +308,26 @@
     }
 
     &_wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
         gap: 8px;
         max-width: 1132px;
         width: 100%;
         margin: 0 auto;
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+        }
     }
 
     &_col {
         display: flex;
         flex-direction: column;
         gap: 8px;
+
+        @include media-breakpoint-up(md) {
+            width: 50%;
+        }
     }
 
     &_item {
@@ -404,6 +412,61 @@
         }
     }
 
+    &_slider {
+        margin: 0 24px;
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            p {
+                font-size: 1.5625rem;
+                line-height: 34px;
+                letter-spacing: -0.090625rem;
+                color: #ffffff82;
+            }
+
+            h5 {
+                font-size: 14px;
+                font-weight: 700;
+                letter-spacing: -0.035625rem;
+                color: #ffffff82;
+            }
+
+        }
+
+        .swiper-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                background-color: transparent;
+                border-radius: 100%;
+                border: 2px solid rgba(255, 255, 255, 0.11);
+                width: 48px;
+                height: 48px;
+                position: unset;
+                margin: 0;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        .btn-2 {
+            color: #3a566a;
+            padding: 12px 25px;
+            font-size: 14px;
+            font-weight: 500;
+            background-color: $white-clr;
+            border-radius: 50px;
+        }
+
+    }
 
     &_text {
         p {
@@ -416,6 +479,8 @@
             font-size: 14px;
         }
     }
+
+
 }
 
 /* ===================================== */

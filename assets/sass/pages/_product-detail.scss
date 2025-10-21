@@ -85,6 +85,24 @@
 
     &_content {
         flex: 1;
+
+        h3 {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+            color: $color-28;
+
+            @include media-breakpoint-up(md) {
+                font-size: 36px;
+                line-height: 40px;
+                color: $color-37;
+            }
+
+            @include media-breakpoint-up(lg) {
+                line-height: 125%;
+            }
+
+        }
     }
 
     &_price {
