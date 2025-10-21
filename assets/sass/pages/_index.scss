@@ -31,6 +31,25 @@
                 font-size: 18px;
             }
         }
+
+        .content {
+            position: relative;
+            font-size: 54px;
+            display: flex;
+        }
+
+        .words-container {
+            position: relative;
+            flex-grow: 1;
+            overflow: hidden;
+            min-height: 72px;
+        }
+
+        .word {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 
     &_service {
@@ -80,7 +99,6 @@
 
         &:hover {
             transition: .3s all ease;
-            background-image: linear-gradient(to right, #0E73A5, #A8E5FF);
 
             .hero_img img {
                 transform: rotate(0deg);
@@ -88,6 +106,30 @@
 
             h4 {
                 color: $white-clr;
+            }
+
+            &:nth-child(1) {
+                background-image: linear-gradient(to right, #0E73A5, #A8E5FF);
+            }
+
+            &:nth-child(2) {
+                background-image: linear-gradient(to right, #235351, #399893);
+            }
+
+            &:nth-child(3) {
+                background-image: linear-gradient(to right, #08707F, #89bdc5);
+            }
+
+            &:nth-child(4) {
+                background-image: linear-gradient(to right, #282380, #8F80E5);
+            }
+
+            &:nth-child(5) {
+                background-image: linear-gradient(to right, #314C64, #2E91DE);
+            }
+
+            &:nth-child(6) {
+                background-image: linear-gradient(to right, #0E73A5, #A8E5FF);
             }
         }
 
@@ -261,224 +303,105 @@
         }
     }
 
+    &_btn {
+        text-align: center;
+    }
+
     &_wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto;
-        gap: 16px;
-
-        @media (max-width: 1200px) {
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-        }
-
-        @media (max-width: 768px) {
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        max-width: 1132px;
+        width: 100%;
+        margin: 0 auto;
     }
 
-    &_card {
-        background: rgba(0, 0, 0, 0.12);
-        backdrop-filter: blur(1.25rem);
-        border-radius: 26px;
-        padding: 20px;
+    &_col {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        position: relative;
-        overflow: hidden;
-
-
-        &::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg,
-                    rgba(255, 255, 255, 0.1) 0%,
-                    rgba(255, 255, 255, 0.05) 100%);
-            pointer-events: none;
-        }
-
-        &-weightloss {
-            grid-column: 1;
-            grid-row: 1 / 3;
-
-            @media (max-width: 1200px) {
-                grid-column: 1;
-                grid-row: 1;
-            }
-
-            @media (max-width: 768px) {
-                grid-column: 1;
-                grid-row: auto;
-            }
-        }
-
-
-        &-menshealth {
-            grid-column: 2 / 4;
-            grid-row: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            align-items: center;
-
-            @media (max-width: 1200px) {
-                grid-column: 2;
-                grid-row: 1 / 3;
-            }
-
-            @media (max-width: 768px) {
-                grid-template-columns: 1fr;
-                grid-column: 1;
-                grid-row: auto;
-                gap: 20px;
-            }
-        }
-
-
-        &-treatment {
-            grid-column: 2;
-            grid-row: 2;
-
-            @media (max-width: 1200px) {
-                grid-column: 1;
-                grid-row: 2;
-            }
-
-            @media (max-width: 768px) {
-                grid-column: 1;
-                grid-row: auto;
-            }
-        }
-
-
-        &-mentalhealth {
-            grid-column: 3;
-            grid-row: 2;
-
-            @media (max-width: 1200px) {
-                grid-column: 1;
-                grid-row: 3;
-            }
-
-            @media (max-width: 768px) {
-                grid-column: 1;
-                grid-row: auto;
-            }
-        }
+        gap: 8px;
     }
 
-    &_content {
+    &_item {
+        border-radius: 26px;
+        backdrop-filter: blur(1.25rem);
+        background: rgba(0, 0, 0, 0.12);
+        color: rgb(255, 255, 255);
+        padding: 40px;
+        height: 400px;
+        overflow: hidden;
         position: relative;
-        z-index: 1;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         h4 {
+            font-size: 29px;
+            line-height: 36px;
+            font-weight: 500;
             color: $white-clr;
-            font-size: 35px;
-            line-height: 1.4;
-            font-weight: 400;
-
-            @media (max-width: 1200px) {
-                font-size: 30px;
-            }
-
-            @media (max-width: 768px) {
-                font-size: 26px;
-            }
-        }
-
-        p {
-            font-size: 18px;
-            margin: 20px 0;
-            line-height: 1.4;
-            color: $white-clr;
-
-            @media (max-width: 768px) {
-                font-size: 16px;
-                margin: 15px 0;
-            }
-        }
-
-        img {
-            width: 150px;
-
-            @media (max-width: 768px) {
-                width: 120px;
-            }
+            max-width: 230px;
+            width: 100%;
         }
 
         .btn-1 {
             background: rgba(255, 255, 255, 0.17);
             backdrop-filter: blur(20px);
-            padding: 14px 40px;
+            padding: 12px 25px;
             border-radius: 36px;
-            color: $white-clr;
+            color: #ffffff;
             display: inline-block;
-            margin-top: 20px;
+            position: absolute;
+            right: 20px;
+            bottom: 54px;
 
             @media (max-width: 768px) {
                 padding: 12px 30px;
                 font-size: 15px;
             }
         }
+
+        .img-1 {
+            height: 100%;
+            position: absolute;
+            left: 12px;
+            z-index: -1;
+            top: 61px;
+            width: 500px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            li {
+                margin-bottom: 8px;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 11px 24px;
+                background: rgba(255, 255, 255, 0.17);
+                border-radius: 30px;
+                display: inline-block;
+                width: fit-content;
+            }
+        }
+
+
     }
 
-    &_image {
-        img {
+    &_text {
+        p {
+            max-width: 734px;
             width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 12px;
-
-            @media (max-width: 768px) {
-                max-width: 300px;
-                margin: 0 auto;
-                display: block;
-            }
-        }
-    }
-
-    &_button {
-        background: $white-clr;
-        color: rgb(58, 86, 106);
-        border: none;
-        padding: 9px 27px;
-        font-size: 16px;
-        font-weight: 400;
-        border-radius: 50px;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        transition: all 0.3s ease;
-        align-self: flex-start;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-
-        @media (max-width: 768px) {
-            padding: 10px 24px;
-            font-size: 15px;
-        }
-
-        &::after {
-            content: '→';
-            font-size: 1.3rem;
-            transition: transform 0.3s ease;
-        }
-
-        &:hover {
-            transform: translateX(5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-
-            &::after {
-                transform: translateX(5px);
-            }
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 36px;
+            color: #ffffff57;
+            font-size: 14px;
         }
     }
 }
-
 
 /* ===================================== */
 /*         STEPS SECTION STYLE           */

@@ -686,7 +686,7 @@ $(".guideslider-1").slick({
 
 
 $(".guideslider-2").slick({
-  speed:30000,
+  speed: 30000,
   autoplay: true,
   autoplaySpeed: 0,
   centerMode: false,
@@ -710,3 +710,58 @@ $(".guideslider-2").slick({
     },
   ],
 });
+
+
+
+
+const words = gsap.utils.toArray(".word");
+const splits = words.map((word) => new SplitText(word, {
+  type: "chars"
+}));
+const firstSplit = splits[0];
+const duration = 0.5;
+const staggerTime = duration / 10;
+const pause = 1;
+const tl = gsap.timeline({
+  repeat: -1
+});
+
+splits.forEach((split, i) => {
+  if (i) {
+    gsap.set(split.chars, {
+      yPercent: 100
+    });
+  }
+  const next = splits[i + 1];
+  tl.to(
+    split.chars, {
+      yPercent: -100,
+      duration: duration,
+      stagger: staggerTime,
+      ease: "power1.inOut"
+    },
+    "+=" + pause
+  );
+  if (next) {
+    tl.to(
+      next.chars, {
+        duration: duration,
+        yPercent: 0,
+        stagger: staggerTime
+      },
+      "<"
+    );
+  }
+});
+
+tl.fromTo(
+  firstSplit.chars, {
+    yPercent: 100
+  }, {
+    duration: duration,
+    yPercent: 0,
+    stagger: staggerTime,
+    immediateRender: false
+  },
+  "<"
+);
