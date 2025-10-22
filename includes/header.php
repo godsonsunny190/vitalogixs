@@ -48,7 +48,7 @@
                             <ul>
                                 <li><a href="weight-loss.php">Weight Loss<img class="w-auto"
                                             src="./assets/images/header/navbar2-chevron-right.svg" alt=""></a></li>
-                                <li><a href="ed.php">Erectile Dysfunction<img class="w-auto"
+                                <li><a href="ed.php">Men's Health<img class="w-auto"
                                             src="./assets/images/header/navbar2-chevron-right.svg" alt=""></a></li>
                                 <li><a href="mental-health.php">Mental Health <img class="w-auto"
                                             src="./assets/images/header/navbar2-chevron-right.svg" alt=""></a></li>
