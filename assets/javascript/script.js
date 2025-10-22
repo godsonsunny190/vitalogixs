@@ -460,9 +460,9 @@ var swiper = new Swiper(".stage_slider", {
 /*               STAGE SLIDER            */
 /* ===================================== */
 var swiper = new Swiper(".team_slider", {
-  slidesPerView: 4,
+  slidesPerView: 3,
   spaceBetween: 20,
-  loop: true,
+  // loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -491,12 +491,12 @@ var swiper = new Swiper(".team_slider", {
     },
 
     1024: {
-      slidesPerView: 3.2,
+      slidesPerView:3,
       spaceBetween: 20,
     },
 
     1280: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 20,
     },
   },
@@ -712,7 +712,9 @@ $(".guideslider-2").slick({
 });
 
 
-
+/* ===================================== */
+/*             TEXT ANIMATION            */
+/* ===================================== */
 
 const words = gsap.utils.toArray(".word");
 const splits = words.map((word) => new SplitText(word, {
