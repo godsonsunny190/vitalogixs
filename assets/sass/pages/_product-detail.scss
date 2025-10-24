@@ -396,10 +396,12 @@
         img {
             border-radius: 20px;
             margin-bottom: 32px;
+            height: 400px;
 
             @include media-breakpoint-up(md) {
                 border-radius: 36px;
                 margin-bottom: 0;
+                height: 600px;
             }
         }
 
@@ -607,6 +609,8 @@
         img {
             height: 240px;
             border-radius: 20px;
+            object-fit: contain;
+            background-color: $color-f8;
 
             @include media-breakpoint-up(md) {
                 height: 300px;
@@ -668,6 +672,11 @@
                 line-height: 150%;
                 color: $color-63;
                 width: 100%;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
 
                 @include media-breakpoint-up(lg) {
                     font-size: 16px;
