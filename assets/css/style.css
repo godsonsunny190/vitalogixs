@@ -11009,7 +11009,7 @@ h3, .h3 {
 }
 .footer_newsletter p {
   align-self: flex-start;
-  color: #F9FAFB;
+  color: #F9FAFB !important;
   font-size: 16px;
   font-weight: 500;
 }
@@ -11076,7 +11076,7 @@ h3, .h3 {
 }
 .footer_logo p {
   align-self: flex-start;
-  color: #F9FAFB;
+  color: #F9FAFB !important;
   font-size: 16px;
   font-weight: 500;
   width: 100%;
@@ -11163,7 +11163,7 @@ h3, .h3 {
   }
 }
 .footer_bottom p {
-  color: #ffffff;
+  color: #ffffff !important;
   order: 2;
 }
 @media (min-width: 768px) {
@@ -11184,15 +11184,29 @@ h3, .h3 {
 .header {
   border-bottom: 1px solid #f3f4f6;
   padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #ffffff;
 }
 .header .navbar-toggler {
   background-color: transparent;
 }
 .header_logo img {
-  max-width: 205px;
+  max-width: 160px;
+}
+@media (min-width: 576px) {
+  .header_logo img {
+    max-width: 205px;
+  }
 }
 .header_connet {
-  display: flex;
+  display: none;
+}
+@media (min-width: 576px) {
+  .header_connet {
+    display: flex;
+  }
 }
 .header_connet a {
   color: #1F2937;
@@ -11473,19 +11487,35 @@ h3, .h3 {
 }
 .hero_content .content {
   position: relative;
-  font-size: 54px;
+  font-size: 34px;
   display: flex;
+}
+@media (min-width: 768px) {
+  .hero_content .content {
+    font-size: 54px;
+  }
 }
 .hero_content .words-container {
   position: relative;
   flex-grow: 1;
   overflow: hidden;
-  min-height: 72px;
+  height: 52px;
+}
+@media (min-width: 768px) {
+  .hero_content .words-container {
+    height: 72px;
+  }
 }
 .hero_content .word {
   position: absolute;
   top: 0;
   left: 0;
+  height: 52px;
+}
+@media (min-width: 768px) {
+  .hero_content .word {
+    height: 72px;
+  }
 }
 .hero_service {
   display: grid;
@@ -11521,6 +11551,7 @@ h3, .h3 {
   letter-spacing: -0.065625rem;
   font-weight: 500;
   transition: 0.3s all ease;
+  color: #000;
 }
 .hero_item span {
   background-color: #10734f;
@@ -11769,7 +11800,7 @@ h3, .h3 {
   height: 400px;
   overflow: hidden;
   position: relative;
-  background-position: center center;
+  background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -11935,6 +11966,7 @@ h3, .h3 {
   max-width: 240px;
   margin: 0 auto;
   text-transform: capitalize;
+  color: #000;
 }
 .steps_item p {
   text-align: center;
@@ -12006,6 +12038,7 @@ h3, .h3 {
   line-height: 22px;
   font-weight: 500;
   letter-spacing: -1.21px;
+  color: #ffffff;
 }
 @media (min-width: 992px) {
   .guide_slider .guideslider-2 .slick-item h4, .guide_slider .guideslider-2 .slick-item .h4 {

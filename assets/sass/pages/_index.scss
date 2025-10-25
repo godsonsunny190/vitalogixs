@@ -34,21 +34,34 @@
 
         .content {
             position: relative;
-            font-size: 54px;
+            font-size: 34px;
             display: flex;
+
+            @include media-breakpoint-up(md) {
+                font-size: 54px;
+            }
         }
 
         .words-container {
             position: relative;
             flex-grow: 1;
             overflow: hidden;
-            min-height: 72px;
+            height: 52px;
+
+            @include media-breakpoint-up(md) {
+                height: 72px;
+            }
         }
 
         .word {
             position: absolute;
             top: 0;
             left: 0;
+            height: 52px;
+
+            @include media-breakpoint-up(md) {
+                height: 72px;
+            }
         }
     }
 
@@ -86,6 +99,7 @@
             letter-spacing: -0.065625rem;
             font-weight: 500;
             transition: .3s all ease;
+            color: #000;
         }
 
         span {
@@ -370,7 +384,7 @@
         height: 400px;
         overflow: hidden;
         position: relative;
-        background-position: center center;
+        background-position: center right;
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -558,6 +572,7 @@
             max-width: 240px;
             margin: 0 auto;
             text-transform: capitalize;
+            color: #000;
         }
 
         p {
@@ -638,6 +653,7 @@
                     line-height: 22px;
                     font-weight: 500;
                     letter-spacing: -1.21px;
+                    color: $white-clr;
 
                     @include media-breakpoint-up(lg) {
                         font-size: 36px;

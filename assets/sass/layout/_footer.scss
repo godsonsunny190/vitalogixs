@@ -35,7 +35,7 @@
 
         p {
             align-self: flex-start;
-            color: #F9FAFB;
+            color: #F9FAFB !important;
             font-size: 16px;
             font-weight: 500;
 
@@ -110,7 +110,7 @@
 
         p {
             align-self: flex-start;
-            color: #F9FAFB;
+            color: #F9FAFB !important;
             font-size: 16px;
             font-weight: 500;
             width: 100%;
@@ -211,7 +211,7 @@
         }
 
         p {
-            color: $white-clr;
+            color: $white-clr !important;
             order: 2;
 
             @include media-breakpoint-up(md) {

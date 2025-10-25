@@ -1,6 +1,10 @@
 .header {
     border-bottom: 1px solid $border-color;
     padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: $white-clr;
 
     .navbar-toggler {
         background-color: transparent;
@@ -8,12 +12,20 @@
 
     &_logo {
         img {
-            max-width: 205px;
+            max-width: 160px;
+
+            @include media-breakpoint-up(sm) {
+                max-width: 205px;
+            }
         }
     }
 
     &_connet {
-        display: flex;
+        display: none;
+
+        @include media-breakpoint-up(sm) {
+            display: flex;
+        }
 
         a {
             color: #1F2937;
