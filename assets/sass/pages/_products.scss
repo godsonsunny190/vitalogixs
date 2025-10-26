@@ -167,11 +167,31 @@
     &_wrapper {
         margin-top: 24px;
 
-
         @include media-breakpoint-up(md) {
             margin-top: 40px;
         }
 
+    }
+
+    &_slider {
+
+        .swiper-btn {
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                background-color: $black-clr;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+
+                &::after {
+                    color: $white-clr;
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+            }
+
+        }
     }
 
     &_card {
@@ -1137,7 +1157,7 @@
         border-radius: 24px;
 
         img {
-            height: 100%;
+            min-height: 520px;
         }
     }
 

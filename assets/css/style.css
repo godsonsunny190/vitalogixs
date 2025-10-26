@@ -11503,7 +11503,7 @@ h3, .h3 {
 }
 @media (min-width: 768px) {
   .hero_content .words-container {
-    height: 72px;
+    height: 62px;
   }
 }
 .hero_content .word {
@@ -11511,10 +11511,12 @@ h3, .h3 {
   top: 0;
   left: 0;
   height: 52px;
+  display: flex;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .hero_content .word {
-    height: 72px;
+    height: 62px;
   }
 }
 .hero_service {
@@ -11953,10 +11955,16 @@ h3, .h3 {
   background-color: #e6f0f8;
   border-radius: 24px;
   padding: 40px 50px 0px;
+  height: 524px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .steps_item {
     padding: 40px 128px 0px;
+    height: 670px;
   }
 }
 .steps_item h4, .steps_item .h4 {
@@ -11984,9 +11992,6 @@ h3, .h3 {
   border-radius: 34px;
   margin-top: 32px;
   display: inline-block;
-}
-.steps_img {
-  margin-top: 80px;
 }
 
 /* ===================================== */
@@ -12305,6 +12310,19 @@ h3, .h3 {
   .product_wrapper {
     margin-top: 40px;
   }
+}
+.product_slider .swiper-btn .swiper-button-next,
+.product_slider .swiper-btn .swiper-button-prev {
+  background-color: #000000;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+.product_slider .swiper-btn .swiper-button-next::after,
+.product_slider .swiper-btn .swiper-button-prev::after {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
 }
 .product_card {
   display: flex;
@@ -13198,7 +13216,7 @@ h3, .h3 {
   border-radius: 24px;
 }
 .contact_image img {
-  height: 100%;
+  min-height: 520px;
 }
 
 /* ===================================== */
@@ -13293,6 +13311,9 @@ h3, .h3 {
     margin: 6px 0;
     display: flex !important;
   }
+}
+.multislider_right .slider .slick-slide div {
+  width: 100%;
 }
 .multislider_right .slider .slick-slide img {
   border-radius: 24px;
@@ -14091,8 +14112,7 @@ h3, .h3 {
 /* ===================================== */
 .faq-2 {
   background-color: #F9FAFB;
-  padding-top: 60px;
-  padding-bottom: 100px;
+  padding: 100px 0;
 }
 .faq-2_wrapper {
   display: flex;
