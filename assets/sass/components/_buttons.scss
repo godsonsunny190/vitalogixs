@@ -13,6 +13,7 @@
 
      &:hover {
          background-color: transparent;
+         border: 1px solid $color-37;
          color: $color-28;
          transition: all 0.3s ease-in-out;
      }
@@ -29,4 +30,10 @@
      flex: 1;
      padding: 11px 0;
      text-align: center;
+
+     &:hover {
+         background-color: $color-37;
+         color: $white-clr;
+         transition: all 0.3s ease-in-out;
+     }
  }

@@ -129,14 +129,25 @@
             margin-top: 24px;
 
             li {
-                width: 34px;
-                height: 34px;
-                border-radius: 50%;
-                background-color: #ffffff;
+                a {
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 36px;
+                    width: 36px;
+                    background-color: rgba(255, 255, 255, 0.11);
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        transform: rotate(360deg);
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
 
                 img {
-                    width: 34px;
-                    height: 34px;
+                    width: 16px;
+                    height: 16px;
                     object-fit: contain;
                 }
             }

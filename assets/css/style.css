@@ -11094,15 +11094,23 @@ h3, .h3 {
   gap: 8px;
   margin-top: 24px;
 }
-.footer_logo ul li {
-  width: 34px;
-  height: 34px;
+.footer_logo ul li a {
   border-radius: 50%;
-  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+  background-color: rgba(255, 255, 255, 0.11);
+  transition: all 0.3s ease-in-out;
+}
+.footer_logo ul li a:hover {
+  transform: rotate(360deg);
+  transition: all 0.3s ease-in-out;
 }
 .footer_logo ul li img {
-  width: 34px;
-  height: 34px;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
 }
 .footer_flex {
@@ -11385,6 +11393,7 @@ h3, .h3 {
 }
 .primary-btn:hover {
   background-color: transparent;
+  border: 1px solid #1f2a37;
   color: #111928;
   transition: all 0.3s ease-in-out;
 }
@@ -11400,6 +11409,11 @@ h3, .h3 {
   flex: 1;
   padding: 11px 0;
   text-align: center;
+}
+.secondery-btn:hover {
+  background-color: #1f2a37;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
 }
 
 .breadcrumb {
@@ -11523,9 +11537,22 @@ h3, .h3 {
   transition: 0.3s all ease;
   position: relative;
 }
+.hero_item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
 .hero_item .icon {
   height: 12px;
   width: auto;
+  position: relative;
+  z-index: 2;
+  transition: 0.3s all ease;
 }
 .hero_item h4, .hero_item .h4 {
   font-size: 20px;
@@ -11533,6 +11560,8 @@ h3, .h3 {
   font-weight: 500;
   transition: 0.3s all ease;
   color: #000;
+  position: relative;
+  z-index: 2;
 }
 .hero_item span {
   background-color: #10734f;
@@ -11541,6 +11570,26 @@ h3, .h3 {
   font-weight: 400;
   padding: 2px 6px;
   font-size: 11px;
+  position: relative;
+  z-index: 2;
+}
+.hero_item:nth-child(1)::before {
+  background: linear-gradient(to right, #0E73A5, #A8E5FF);
+}
+.hero_item:nth-child(2)::before {
+  background: linear-gradient(to right, #235351, #399893);
+}
+.hero_item:nth-child(3)::before {
+  background: linear-gradient(to right, #08707F, #89bdc5);
+}
+.hero_item:nth-child(4)::before {
+  background: linear-gradient(to right, #282380, #8F80E5);
+}
+.hero_item:nth-child(5)::before {
+  background: linear-gradient(to right, #314C64, #2E91DE);
+}
+.hero_item:nth-child(6)::before {
+  background: linear-gradient(to right, #0E73A5, #A8E5FF);
 }
 .hero_item:hover {
   transition: 0.3s all ease;
@@ -11551,23 +11600,11 @@ h3, .h3 {
 .hero_item:hover h4, .hero_item:hover .h4 {
   color: #ffffff;
 }
-.hero_item:hover:nth-child(1) {
-  background-image: linear-gradient(to right, #0E73A5, #A8E5FF);
+.hero_item:hover::before {
+  opacity: 1;
 }
-.hero_item:hover:nth-child(2) {
-  background-image: linear-gradient(to right, #235351, #399893);
-}
-.hero_item:hover:nth-child(3) {
-  background-image: linear-gradient(to right, #08707F, #89bdc5);
-}
-.hero_item:hover:nth-child(4) {
-  background-image: linear-gradient(to right, #282380, #8F80E5);
-}
-.hero_item:hover:nth-child(5) {
-  background-image: linear-gradient(to right, #314C64, #2E91DE);
-}
-.hero_item:hover:nth-child(6) {
-  background-image: linear-gradient(to right, #0E73A5, #A8E5FF);
+.hero_item:hover .icon {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(186deg) brightness(102%) contrast(102%);
 }
 .hero_item-url {
   position: absolute;
