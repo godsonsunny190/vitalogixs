@@ -36,34 +36,26 @@
             position: relative;
             font-size: 34px;
             display: flex;
+            height: 52px;
 
             @include media-breakpoint-up(md) {
                 font-size: 54px;
+                height: 72px;
             }
+
         }
 
         .words-container {
             position: relative;
             flex-grow: 1;
             overflow: hidden;
-            height: 52px;
-
-            @include media-breakpoint-up(md) {
-                height: 62px;
-            }
+            line-height: normal;
         }
 
         .word {
             position: absolute;
             top: 0;
             left: 0;
-            height: 52px;
-            display: flex;
-            align-items: center;
-
-            @include media-breakpoint-up(md) {
-                height: 62px;
-            }
         }
     }
 
