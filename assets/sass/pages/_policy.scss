@@ -5,6 +5,7 @@
 .policysec {
     margin: 0 auto;
     margin-top: 80px;
+    margin-bottom: 80px;
     max-width: 1200px;
     width: 100%;
 
@@ -12,6 +13,10 @@
         margin-top: 16px;
         max-width: 900px;
         width: 100%;
+    }
+
+    h2 {
+        margin-bottom: 24px;
     }
 
     h3 {

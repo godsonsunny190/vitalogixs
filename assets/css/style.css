@@ -14283,6 +14283,7 @@ h3, .h3 {
 .policysec {
   margin: 0 auto;
   margin-top: 80px;
+  margin-bottom: 80px;
   max-width: 1200px;
   width: 100%;
 }
@@ -14290,6 +14291,9 @@ h3, .h3 {
   margin-top: 16px;
   max-width: 900px;
   width: 100%;
+}
+.policysec h2, .policysec .h2 {
+  margin-bottom: 24px;
 }
 .policysec h3, .policysec .h3 {
   font-size: 24px;
