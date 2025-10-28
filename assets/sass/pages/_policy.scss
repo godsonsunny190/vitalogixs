@@ -1,0 +1,52 @@
+/* ===================================== */
+/*           POLICY SECTION STYLE        */
+/* ===================================== */
+
+.policysec {
+    margin: 0 auto;
+    margin-top: 80px;
+    max-width: 1200px;
+    width: 100%;
+
+    .note {
+        margin-top: 16px;
+        max-width: 900px;
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    p {
+        margin-bottom: 16px;
+    }
+
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    ol {
+        li {
+            margin-bottom: 24px;
+            list-style: auto;
+        }
+    }
+
+    ul {
+        padding-left: 32px;
+
+        li {
+            margin-bottom: 24px;
+            list-style: disc;
+
+            &::marker {
+                color: #808285;
+            }
+        }
+    }
+}

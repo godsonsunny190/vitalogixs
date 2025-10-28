@@ -14277,4 +14277,46 @@ h3, .h3 {
   text-decoration: underline;
 }
 
+/* ===================================== */
+/*           POLICY SECTION STYLE        */
+/* ===================================== */
+.policysec {
+  margin: 0 auto;
+  margin-top: 80px;
+  max-width: 1200px;
+  width: 100%;
+}
+.policysec .note {
+  margin-top: 16px;
+  max-width: 900px;
+  width: 100%;
+}
+.policysec h3, .policysec .h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.policysec p {
+  margin-bottom: 16px;
+}
+.policysec h4, .policysec .h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.policysec ol li {
+  margin-bottom: 24px;
+  list-style: auto;
+}
+.policysec ul {
+  padding-left: 32px;
+}
+.policysec ul li {
+  margin-bottom: 24px;
+  list-style: disc;
+}
+.policysec ul li::marker {
+  color: #808285;
+}
+
 /*# sourceMappingURL=style.css.map */
