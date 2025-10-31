@@ -12577,6 +12577,7 @@ h3, .h3 {
   border-radius: 24px;
   background-color: #e6f0f8;
   gap: 4.5px;
+  height: auto;
 }
 @media (min-width: 768px) {
   .product_card {

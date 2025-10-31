@@ -181,6 +181,7 @@
         border-radius: 24px;
         background-color: $color-f8;
         gap: 4.5px;
+        height: auto;
 
         @include media-breakpoint-up(md) {
             gap: 7.23px;
