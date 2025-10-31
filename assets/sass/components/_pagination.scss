@@ -1,0 +1,17 @@
+.swiper-btn {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        background-color: $black-clr;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+
+        &::after {
+            color: $white-clr;
+            font-size: 13px;
+            font-weight: bold;
+        }
+    }
+
+}
