@@ -118,76 +118,6 @@ $(document).ready(function ($) {
   });
 });
 
-/* ===================================== */
-/*             TEXT ANIMATION            */
-/* ===================================== */
-(function ($) {
-  "use strict";
-
-  // Animation gsap
-  function title_animation() {
-    var tg_var = jQuery(".sec-title-animation");
-    if (!tg_var.length) {
-      return;
-    }
-    const quotes = document.querySelectorAll(
-      ".sec-title-animation .title-animation"
-    );
-
-    quotes.forEach((quote) => {
-      //Reset if needed
-      if (quote.animation) {
-        quote.animation.progress(1).kill();
-        quote.split.revert();
-      }
-
-      var getclass = quote.closest(".sec-title-animation").className;
-      var animation = getclass.split("animation-");
-      if (animation[1] == "style4") return;
-
-      quote.split = new SplitText(quote, {
-        type: "lines,words,chars",
-        linesClass: "split-line",
-      });
-      gsap.set(quote, {
-        perspective: 400,
-      });
-
-      if (animation[1] == "style1") {
-        gsap.set(quote.split.chars, {
-          opacity: 0,
-          y: "90%",
-          rotateX: "-40deg",
-        });
-      }
-      if (animation[1] == "style2") {
-        gsap.set(quote.split.chars, {
-          opacity: 0,
-          x: "50",
-        });
-      }
-      if (animation[1] == "style3") {
-        gsap.set(quote.split.chars, {
-          opacity: 0,
-        });
-      }
-      quote.animation = gsap.to(quote.split.chars, {
-        scrollTrigger: {
-          trigger: quote,
-          start: "top 90%",
-        },
-        x: "0",
-        y: "0",
-        rotateX: "0",
-        opacity: 1,
-        duration: 1,
-        ease: Back.easeOut,
-        stagger: 0.02,
-      });
-    });
-  }
-  ScrollTrigger.addEventListener("refresh", title_animation);
-})(jQuery);
 
 /* ===================================== */
 /*             REVEAL SCRIPT             */
@@ -729,6 +659,87 @@ $(".guideslider-2").slick({
 
 
 /* ===================================== */
+/*               ACCESS SLIDER           */
+/* ===================================== */
+var swiper = new Swiper(".access_slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  speed: 1000,
+  // autoplay: {
+  //   delay: 1500,
+  //   disableOnInteraction: false,
+  // },
+});
+
+
+/* ===================================== */
+/*                BACKTOTOP              */
+/* ===================================== */
+
+! function (s) {
+  s(".switch").on("click", function () {
+      s("body").hasClass("light") ? (s("body").removeClass("light"),
+        s(".switch").removeClass("switched")) : (s("body").addClass("light"),
+        s(".switch").addClass("switched"))
+    }),
+    s(document).ready(function () {
+      var e = document.querySelector(".progress-wrap path"),
+        t = e.getTotalLength();
+      e.style.transition = e.style.WebkitTransition = "none",
+        e.style.strokeDasharray = t + " " + t,
+        e.style.strokeDashoffset = t,
+        e.getBoundingClientRect(),
+        e.style.transition = e.style.WebkitTransition = "stroke-dashoffset 10ms linear";
+      var o = function () {
+        var o = s(window).scrollTop(),
+          r = s(document).height() - s(window).height(),
+          i = t - o * t / r;
+        e.style.strokeDashoffset = i
+      };
+      o(),
+        s(window).scroll(o);
+      jQuery(window).on("scroll", function () {
+          jQuery(this).scrollTop() > 50 ? jQuery(".progress-wrap").addClass("active-progress") : jQuery(".progress-wrap").removeClass("active-progress")
+        }),
+        jQuery(".progress-wrap").on("click", function (s) {
+          return s.preventDefault(),
+            jQuery("html, body").animate({
+              scrollTop: 0
+            }, 550),
+            !1
+        })
+    })
+}(jQuery);
+
+
+/* ===================================== */
+/*              PROGRESS BAR             */
+/* ===================================== */
+
+window.addEventListener('load', () => {
+  const bars = document.querySelectorAll('.progress-bar-fill');
+
+  setTimeout(() => {
+    bars.forEach(bar => {
+      const progress = bar.getAttribute('data-progress');
+      bar.style.width = progress + '%';
+    });
+  }, 100);
+});
+
+
+/* ===================================== */
 /*             TEXT ANIMATION            */
 /* ===================================== */
 
@@ -783,29 +794,3 @@ tl.fromTo(
   },
   "<"
 );
-
-
-
-/* ===================================== */
-/*               ACCESS SLIDER            */
-/* ===================================== */
-var swiper = new Swiper(".access_slider", {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  speed: 1000,
-  // autoplay: {
-  //   delay: 1500,
-  //   disableOnInteraction: false,
-  // },
-});

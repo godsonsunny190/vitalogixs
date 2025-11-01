@@ -1,7 +1,5 @@
 @import "./utilities/variables";
-@import "./utilities/mixins";
 @import "./utilities/colors";
-@import "./utilities/gutters";
 
 @import "./vendors/bootstrap/bootstrap.scss";
 
@@ -19,6 +17,6 @@
 
 @import "./pages/index";
 @import "./pages/products";
-@import "./pages/sexual-health";
 @import "./pages/product-detail";
 @import "./pages/policy";
+@import "./pages/about";
