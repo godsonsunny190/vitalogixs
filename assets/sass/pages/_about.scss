@@ -400,3 +400,74 @@
         }
     }
 }
+
+/* ===================================== */
+/*        ADVISORS SECTION STYLE         */
+/* ===================================== */
+.advisors {
+    margin: 120px 0;
+
+    &_slider {
+        margin-top: 40px;
+    }
+
+    &_item {
+
+        &:hover {
+            transition: all .4s ease-in-out;
+
+            .advisors_bio {
+                opacity: 1;
+            }
+        }
+    }
+
+    &_img {
+        img {
+            min-height: 400px;
+        }
+    }
+
+    &_content {
+        margin-top: 12px;
+
+        h4 {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        span {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 14px;
+        }
+
+        ul {
+            margin-top: 12px;
+
+            li {
+                display: flex;
+                align-items: center;
+                column-gap: 12px;
+                margin-bottom: 10px;
+                font-size: 14px;
+                font-weight: 400;
+
+                img {
+                    width: 20px;
+                    height: 20px
+                }
+            }
+        }
+    }
+
+    &_bio {
+        opacity: 1;
+        transition: all .4s ease-in-out;
+    }
+}

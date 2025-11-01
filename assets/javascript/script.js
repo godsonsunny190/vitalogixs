@@ -684,6 +684,51 @@ var swiper = new Swiper(".access_slider", {
 
 
 /* ===================================== */
+/*             ADVISORS SLIDER           */
+/* ===================================== */
+var swiper = new Swiper(".advisors_slider", {
+  slidesPerView: 4,
+  spaceBetween: 26,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  speed: 1000,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 26,
+    },
+    768: {
+      slidesPerView: 3.5,
+      spaceBetween: 26,
+    },
+    640: {
+      slidesPerView: 2.5,
+      spaceBetween: 20,
+    },
+    320: {
+      slidesPerView: 1.5,
+      spaceBetween: 16,
+    },
+  },
+});
+
+
+
+/* ===================================== */
 /*                BACKTOTOP              */
 /* ===================================== */
 

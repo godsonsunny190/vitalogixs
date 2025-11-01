@@ -14970,4 +14970,58 @@ h3, .h3 {
   }
 }
 
+/* ===================================== */
+/*        ADVISORS SECTION STYLE         */
+/* ===================================== */
+.advisors {
+  margin: 120px 0;
+}
+.advisors_slider {
+  margin-top: 40px;
+}
+.advisors_item:hover {
+  transition: all 0.4s ease-in-out;
+}
+.advisors_item:hover .advisors_bio {
+  opacity: 1;
+}
+.advisors_img img {
+  min-height: 400px;
+}
+.advisors_content {
+  margin-top: 12px;
+}
+.advisors_content h4, .advisors_content .h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.advisors_content span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.advisors_content p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 14px;
+}
+.advisors_content ul {
+  margin-top: 12px;
+}
+.advisors_content ul li {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.advisors_content ul li img {
+  width: 20px;
+  height: 20px;
+}
+.advisors_bio {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
 /*# sourceMappingURL=style.css.map */
