@@ -314,7 +314,8 @@
         letter-spacing: 1px;
         color: #171717;
         border-bottom: 1px solid #ddd;
-        display: inline-block;
+        display: flex;
+        justify-content: center;
 
         @include media-breakpoint-down(md) {
             font-size: 40px;
