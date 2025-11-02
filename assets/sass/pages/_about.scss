@@ -27,7 +27,7 @@
 
         img {
             filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
-            height: 500px;
+            height: 600px;
             border-radius: 26px;
         }
 
@@ -250,7 +250,7 @@
 
         .progress-bar-fill {
             height: 100%;
-            background: linear-gradient(90deg, #3dd5a7 0%, #2ab88a 100%);
+            background: $color-6c;
             border-radius: 10px;
             width: 0;
             transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -294,6 +294,119 @@
 
 }
 
+
+/* ===================================== */
+/*          PROCESS SECTION STYLE        */
+/* ===================================== */
+
+.process {
+    margin-top: 120px;
+
+    &_wrapper {
+        display: flex;
+        gap: 100px;
+    }
+
+    &_left {
+        width: 35%;
+
+        h2 {
+            margin-top: 10px;
+            line-height: 50px;
+            max-width: 430px;
+            width: 100%;
+        }
+
+        p {
+            margin-top: 10px;
+            max-width: 405px;
+            width: 100%;
+        }
+    }
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    &_item {
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+
+        h5 {
+            font-size: 28px;
+            line-height: 28px;
+            color: #333;
+        }
+
+        h4 {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #333;
+        }
+
+        p {
+            line-height: 22px;
+            color: #333;
+        }
+
+        .line {
+            height: 100%;
+            width: 2px;
+            background-color: #0000001a;
+        }
+    }
+
+    &_number {
+        height: auto;
+        flex-flow: column;
+        flex: none;
+        place-content: center flex-start;
+        align-self: stretch;
+        align-items: center;
+        gap: 0;
+        width: min-content;
+        padding: 0;
+        display: flex;
+        position: relative;
+    }
+
+    &_text {
+        padding-bottom: 20px;
+    }
+
+    &_right {
+        flex: 1 0 0;
+        position: relative;
+
+        img {
+            border-radius: 26px;
+            height: 620px;
+        }
+    }
+
+    &_image {
+        display: none;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.05);
+        transition: opacity 0.6s ease,
+            transform 0.6s ease,
+            visibility 0.6s;
+
+        &.active {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+    }
+}
 
 /* ===================================== */
 /*           COUNTER SECTION STYL        */
@@ -375,7 +488,6 @@
 
         img {
             width: auto;
-            filter: brightness(0) saturate(100%) invert(63%) sepia(20%) saturate(533%) hue-rotate(352deg) brightness(102%) contrast(98%);
         }
 
         h4 {

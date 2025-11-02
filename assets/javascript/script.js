@@ -820,6 +820,24 @@ $(window).scroll(function () {
 
 });
 
+
+
+
+
+const items = document.querySelectorAll(".process_item");
+const images = document.querySelectorAll(".process_image");
+
+items.forEach((item, index) => {
+  item.addEventListener("mouseenter", () => {
+    items.forEach((i) => i.classList.remove("active"));
+    images.forEach((img) => img.classList.remove("active"));
+
+    item.classList.add("active");
+    images[index] ?.classList.add("active");
+  });
+});
+
+
 /* ===================================== */
 /*             TEXT ANIMATION            */
 /* ===================================== */
