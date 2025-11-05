@@ -179,3 +179,199 @@
         }
     }
 }
+
+
+/* ===================================== */
+/*        BLOG DETAIL SECTION STYL       */
+/* ===================================== */
+
+
+.blog-detail {
+    margin-top: 80px;
+
+    &_layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+        margin: 40px 0;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+}
+
+
+.articles {
+    background-color: #fff;
+    border-radius: 12px;
+
+    &_meta {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    &_author {
+        font-weight: 600;
+        color: #2c5aa0;
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+    }
+
+    &_content {
+        h2 {
+            margin: 35px 0 20px;
+            color: #2c5aa0;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #444;
+            line-height: 1.7;
+        }
+    }
+}
+
+.benefits-list {
+    list-style-type: none;
+    margin: 30px 0;
+
+    &_item {
+        margin-bottom: 25px;
+        padding-left: 35px;
+        position: relative;
+
+        &::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2c5aa0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        p {
+            color: #555;
+        }
+    }
+
+    &_title {
+        margin-bottom: 10px;
+        color: #2c5aa0;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &_section {
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 25px;
+
+        @media (max-width: 480px) {
+            padding: 20px;
+        }
+    }
+
+    &_title {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+        color: #1a2b4c;
+        border-bottom: 2px solid #eaeaea;
+        padding-bottom: 10px;
+        font-weight: 600;
+    }
+}
+
+
+.latest-posts {
+ 
+    &_item {
+        margin-bottom: 18px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid #f0f0f0;
+
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+
+    &_date {
+        font-size: 0.85rem;
+        color: #888;
+        margin-bottom: 5px;
+    }
+
+    &_title {
+        font-weight: 600;
+        color: #333;
+        font-size: 1.05rem;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #2c5aa0;
+        }
+    }
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
+
+    &_item {
+        background-color: #f0f4fa;
+        padding: 14px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 500;
+        transition: all 0.3s;
+        color: #2c5aa0;
+        font-size: 0.95rem;
+
+        &:hover {
+            background-color: #e1e9f5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &_item {
+        background-color: #f0f4fa;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        color: #2c5aa0;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: #e1e9f5;
+            transform: translateY(-2px);
+        }
+    }
+}
+
