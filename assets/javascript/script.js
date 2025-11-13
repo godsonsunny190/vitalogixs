@@ -26,13 +26,13 @@ window.$zopim || (function (d, s) {
 /* ===================================== */
 /*          COMMON HEADER AND FOOT       */
 /* ===================================== */
-// ["header", "footer"].forEach((part) => {
-//   fetch(`${part}.html`)
-//     .then((response) => response.text())
-//     .then((data) => {
-//       document.getElementById(part).innerHTML = data;
-//     });
-// });
+["header", "footer"].forEach((part) => {
+  fetch(`${part}.html`)
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById(part).innerHTML = data;
+    });
+});
 
 /* ===================================== */
 /*             LENIS SCROLL              */
@@ -814,14 +814,8 @@ window.addEventListener('load', () => {
 
 var counted = 0;
 $(window).scroll(function () {
-  var $counter = $('#counter');
-  
-  if ($counter.length === 0) {
-    return;
-  }
 
-  var oTop = $counter.offset().top - window.innerHeight;
-
+  var oTop = $('#counter').offset().top - window.innerHeight;
   if (counted == 0 && $(window).scrollTop() > oTop) {
     $('.count').each(function () {
       var $this = $(this),
@@ -829,21 +823,28 @@ $(window).scroll(function () {
       $({
         countNum: $this.text()
       }).animate({
-        countNum: countTo
-      }, {
-        duration: 2000,
-        easing: 'swing',
-        step: function () {
-          $this.text(Math.floor(this.countNum));
+          countNum: countTo
         },
-        complete: function () {
-          $this.text(this.countNum);
-        }
-      });
+
+        {
+
+          duration: 2000,
+          easing: 'swing',
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
+
+        });
     });
     counted = 1;
   }
+
 });
+
 
 /* ===================================== */
 /*           ABOUT US SCRIPT             */
