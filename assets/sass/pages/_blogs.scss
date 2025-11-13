@@ -180,7 +180,6 @@
     }
 }
 
-
 /* ===================================== */
 /*        BLOG DETAIL SECTION STYL       */
 /* ===================================== */
@@ -210,24 +209,25 @@
     &_meta {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 20px;
         font-size: 0.9rem;
         color: #666;
     }
 
     &_author {
         font-weight: 600;
-        color: #2c5aa0;
-        margin-bottom: 30px;
-        font-size: 1.1rem;
+        color: $color-ca;
+        font-size: 14px;
     }
 
     &_content {
+        margin-top: 30px;
+
         h2 {
-            margin: 35px 0 20px;
-            color: #2c5aa0;
+            margin: 35px 0 12px;
+            color: $color-ca;
             font-size: 1.8rem;
             font-weight: 600;
+            line-height: 32px;
         }
 
         p {
@@ -237,10 +237,15 @@
             line-height: 1.7;
         }
     }
+
+    &_img {
+        height: 500px;
+        border-radius: 26px;
+        margin-top: 12px;
+    }
 }
 
 .benefits-list {
-    list-style-type: none;
     margin: 30px 0;
 
     &_item {
@@ -252,7 +257,7 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: #2c5aa0;
+            color: $color-ca;
             font-weight: bold;
             font-size: 1.2rem;
         }
@@ -264,7 +269,7 @@
 
     &_title {
         margin-bottom: 10px;
-        color: #2c5aa0;
+        color: $color-ca;
         font-size: 1.3rem;
         font-weight: 600;
     }
@@ -275,14 +280,10 @@
     flex-direction: column;
     gap: 30px;
 
+
     &_section {
         background-color: #fff;
         border-radius: 12px;
-        padding: 25px;
-
-        @media (max-width: 480px) {
-            padding: 20px;
-        }
     }
 
     &_title {
@@ -297,16 +298,26 @@
 
 
 .latest-posts {
- 
+
     &_item {
         margin-bottom: 18px;
         padding-bottom: 18px;
         border-bottom: 1px solid #f0f0f0;
+        display: flex;
+        gap: 12px;
 
         &:last-child {
             margin-bottom: 0;
             padding-bottom: 0;
             border-bottom: none;
+        }
+    }
+
+    &_img {
+        img {
+            width: 160px;
+            height: 90px;
+            border-radius: 12px;
         }
     }
 
@@ -321,6 +332,7 @@
         color: #333;
         font-size: 1.05rem;
         transition: color 0.3s;
+        display: block;
 
         &:hover {
             color: #2c5aa0;
@@ -344,7 +356,7 @@
         text-align: center;
         font-weight: 500;
         transition: all 0.3s;
-        color: #2c5aa0;
+        color: $color-ca;
         font-size: 0.95rem;
 
         &:hover {
@@ -365,7 +377,7 @@
         padding: 8px 14px;
         border-radius: 20px;
         font-size: 0.85rem;
-        color: #2c5aa0;
+        color: $color-ca;
         transition: all 0.3s;
 
         &:hover {
@@ -374,4 +386,3 @@
         }
     }
 }
-

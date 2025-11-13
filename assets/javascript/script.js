@@ -1,13 +1,38 @@
+window.$zopim || (function (d, s) {
+  var z = $zopim = function (c) {
+      z._.push(c);
+    },
+    $ = z.s = d.createElement(s),
+    e = d.getElementsByTagName(s)[0];
+
+  z.set = function (o) {
+    z.set._.push(o);
+  };
+
+  z._ = [];
+  z.set._ = [];
+
+  $.async = true;
+  $.setAttribute("charset", "utf-8");
+  $.src = "https://v2.zopim.com/?3oyxoPqJnjZRvn5m49ANQLOddjockqiZ";
+  z.t = +new Date;
+  $.type = "text/javascript";
+
+  e.parentNode.insertBefore($, e);
+})(document, "script");
+
+
+
 /* ===================================== */
 /*          COMMON HEADER AND FOOT       */
 /* ===================================== */
-["header", "footer"].forEach((part) => {
-  fetch(`${part}.html`)
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById(part).innerHTML = data;
-    });
-});
+// ["header", "footer"].forEach((part) => {
+//   fetch(`${part}.html`)
+//     .then((response) => response.text())
+//     .then((data) => {
+//       document.getElementById(part).innerHTML = data;
+//     });
+// });
 
 /* ===================================== */
 /*             LENIS SCROLL              */
@@ -122,71 +147,71 @@ $(document).ready(function ($) {
 /* ===================================== */
 /*             REVEAL SCRIPT             */
 /* ===================================== */
-function animateFrom(elem, direction) {
-  direction = direction || 1;
+// function animateFrom(elem, direction) {
+//   direction = direction || 1;
 
-  var x = 0,
-    y = direction * 100;
+//   var x = 0,
+//     y = direction * 100;
 
-  if (elem.classList.contains("fromLeft")) {
-    x = -100;
-    y = 0;
-  } else if (elem.classList.contains("fromRight")) {
-    x = 100;
-    y = 0;
-  }
+//   if (elem.classList.contains("fromLeft")) {
+//     x = -100;
+//     y = 0;
+//   } else if (elem.classList.contains("fromRight")) {
+//     x = 100;
+//     y = 0;
+//   }
 
-  gsap.fromTo(
-    elem, {
-      x: x,
-      y: y,
-      autoAlpha: 0
-    }, {
-      duration: 1.5,
-      x: 0,
-      y: 0,
-      autoAlpha: 1,
-      ease: "power3.out",
-      overwrite: "auto",
-      clearProps: "transform",
-    }
-  );
-}
+//   gsap.fromTo(
+//     elem, {
+//       x: x,
+//       y: y,
+//       autoAlpha: 0
+//     }, {
+//       duration: 1.5,
+//       x: 0,
+//       y: 0,
+//       autoAlpha: 1,
+//       ease: "power3.out",
+//       overwrite: "auto",
+//       clearProps: "transform",
+//     }
+//   );
+// }
 
-function hide(elem) {
-  gsap.set(elem, {
-    autoAlpha: 0
-  });
-}
+// function hide(elem) {
+//   gsap.set(elem, {
+//     autoAlpha: 0
+//   });
+// }
 
-document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(ScrollTrigger);
+// document.addEventListener("DOMContentLoaded", function () {
+//   gsap.registerPlugin(ScrollTrigger);
 
-  ScrollTrigger.config({
-    autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
-  });
+//   ScrollTrigger.config({
+//     autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
+//   });
 
-  gsap.utils.toArray(".gs_reveal").forEach(function (elem) {
-    hide(elem);
+//   gsap.utils.toArray(".gs_reveal").forEach(function (elem) {
+//     hide(elem);
 
-    ScrollTrigger.create({
-      trigger: elem,
-      start: "top 100%",
-      end: "bottom 15%",
-      markers: false,
-      toggleActions: "play none none reverse",
-      onEnter: function () {
-        animateFrom(elem);
-      },
-      onEnterBack: function () {
-        animateFrom(elem, -1);
-      },
-      onLeave: function () {
-        hide(elem);
-      },
-    });
-  });
-});
+//     ScrollTrigger.create({
+//       trigger: elem,
+//       start: "top 100%",
+//       end: "bottom 15%",
+//       markers: false,
+//       toggleActions: "play none none reverse",
+//       onEnter: function () {
+//         animateFrom(elem);
+//       },
+//       onEnterBack: function () {
+//         animateFrom(elem, -1);
+//       },
+//       onLeave: function () {
+//         hide(elem);
+//       },
+//     });
+//   });
+// });
 
 /* ===================================== */
 /*             REVEAL SCRIPT             */
@@ -789,8 +814,14 @@ window.addEventListener('load', () => {
 
 var counted = 0;
 $(window).scroll(function () {
+  var $counter = $('#counter');
+  
+  if ($counter.length === 0) {
+    return;
+  }
 
-  var oTop = $('#counter').offset().top - window.innerHeight;
+  var oTop = $counter.offset().top - window.innerHeight;
+
   if (counted == 0 && $(window).scrollTop() > oTop) {
     $('.count').each(function () {
       var $this = $(this),
@@ -798,31 +829,25 @@ $(window).scroll(function () {
       $({
         countNum: $this.text()
       }).animate({
-          countNum: countTo
+        countNum: countTo
+      }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function () {
+          $this.text(Math.floor(this.countNum));
         },
-
-        {
-
-          duration: 2000,
-          easing: 'swing',
-          step: function () {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function () {
-            $this.text(this.countNum);
-            //alert('finished');
-          }
-
-        });
+        complete: function () {
+          $this.text(this.countNum);
+        }
+      });
     });
     counted = 1;
   }
-
 });
 
-
-
-
+/* ===================================== */
+/*           ABOUT US SCRIPT             */
+/* ===================================== */
 
 const items = document.querySelectorAll(".process_item");
 const images = document.querySelectorAll(".process_image");

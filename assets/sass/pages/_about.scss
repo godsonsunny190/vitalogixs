@@ -21,6 +21,12 @@
             width: 50%;
         }
 
+        &:first-child {
+            @include media-breakpoint-down(md) {
+                order: 1;
+            }
+        }
+
         h2 {
             margin-bottom: 30px;
         }
@@ -29,6 +35,10 @@
             filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
             height: 600px;
             border-radius: 26px;
+
+            @include media-breakpoint-down(md) {
+                height: 400px;
+            }
         }
 
         p {
@@ -44,6 +54,11 @@
     margin-top: 130px;
     padding-bottom: 130px;
     border-bottom: 1px solid #dee2e6;
+
+    @include media-breakpoint-down(md) {
+        padding-bottom: 50px;
+        margin-top: 60px;
+    }
 
     &_wrapper {
         position: relative;
@@ -302,13 +317,26 @@
 .process {
     margin-top: 120px;
 
+    @include media-breakpoint-down(lg) {
+        margin-top: 60px;
+    }
+
     &_wrapper {
         display: flex;
         gap: 100px;
+
+        @include media-breakpoint-down(lg) {
+            flex-direction: column;
+            gap: 50px;
+        }
     }
 
     &_left {
         width: 35%;
+
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
 
         h2 {
             margin-top: 10px;
@@ -322,6 +350,8 @@
             max-width: 405px;
             width: 100%;
         }
+
+
     }
 
     &_content {
@@ -407,6 +437,14 @@
         img {
             border-radius: 26px;
             height: 620px;
+
+            @include media-breakpoint-down(lg) {
+                height: 500px;
+            }
+
+            @include media-breakpoint-down(md) {
+                height: 400px;
+            }
         }
     }
 
@@ -435,6 +473,10 @@
 
 .counter {
     margin-top: 130px;
+
+    @include media-breakpoint-down(lg) {
+        margin-top: 80px;
+    }
 
     &_box {
         text-align: center;
@@ -540,6 +582,10 @@
 /* ===================================== */
 .advisors {
     margin: 120px 0;
+
+    @include media-breakpoint-down(lg) {
+        margin: 60px 0;
+    }
 
     &_slider {
         margin-top: 40px;
