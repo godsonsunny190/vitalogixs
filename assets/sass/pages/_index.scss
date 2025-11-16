@@ -36,9 +36,13 @@
             position: relative;
             font-size: 34px;
             display: flex;
-            height: 52px;
+            height: 42px;
 
             @include media-breakpoint-up(md) {
+                height: 52px;
+            }
+
+            @include media-breakpoint-up(lg) {
                 font-size: 54px;
                 height: 72px;
             }
@@ -691,7 +695,7 @@
 
             .slick-item {
                 border-radius: 20px;
-                padding: 20px 18px 10px;
+                padding: 20px 18px 20px;
                 display: flex !important;
                 flex-direction: column;
                 justify-content: flex-end;
@@ -709,11 +713,11 @@
                     font-weight: 500;
                     letter-spacing: -1.21px;
                     color: $white-clr;
+                    font-family: 'Sofia Pro';
 
                     @include media-breakpoint-up(lg) {
-                        font-size: 36px;
-                        line-height: 48.6px;
-                        letter-spacing: -3.45px;
+                        font-size: 50px;
+                        line-height: 3.0375rem;
                     }
                 }
 
@@ -721,6 +725,8 @@
                     font-size: 14px;
                     line-height: 14.4px;
                     letter-spacing: -0.57px;
+                    font-family: 'Sofia Pro';
+                    font-weight: 500;
 
                     @include media-breakpoint-up(lg) {
                         font-size: 16px;
